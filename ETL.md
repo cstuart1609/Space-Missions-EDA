@@ -1,7 +1,9 @@
 Performing my ETL within Excel, note the error in the date field with all years showing as 30/12/1899, as there is already a year field, I shall simply remove this data as it is unimportant to my analysis.
+
 ![image](https://github.com/user-attachments/assets/01295f51-1176-45b0-8682-b1303dae8082)
 
 I am now happy with the data and suitably happy that it is ready to queried consistently and logically. I saved this table as space_missions.csv.
+
 ![image](https://github.com/user-attachments/assets/3b9e617c-ae39-4d62-8608-8f0000ffdd45)
 
 Before moving onto the next stage of this project, I wanted to create a second dataset so that I could have a database with multiple tables in order to perform joins. Returning to my goal of this project, to evaluate trends in public vs private sector spaceflight, I needed to create a dataset which could tell me which flights were public or private sector. 
