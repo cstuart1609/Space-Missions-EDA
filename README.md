@@ -1,5 +1,6 @@
 # Exploratory Data Analysis on Real Time Space Missions Dataset 
 
+
 ## Project Brief
 Space Missions is a dataset which shows a Global rocket launches between 1957-2022. I will performing some initial ETL on the dataset using Power Query before creating a database within DB Browser for SQLite.
 
@@ -33,4 +34,9 @@ Before moving onto the next stage of this project, I wanted to create a second d
 
 For exclusively this part of the project, I utilised generative AI to streamline a specific part of the data preparation process—creating a table of existing company names and classifying them as public or private sector. By automating this step, I was able to focus more on the deeper analysis and insights, ensuring a more efficient workflow. AI tools were used responsibly and did not influence the core data analysis, but instead acted as a means to enhance productivity and accuracy during the initial data collection phase. In order to cross to ensure the resultant table returned the exact index of companies as the initial data set, I used an EXACT function which confirmed consistency across the two datasets. I saved this table as space_agencies.csv.
 
+* Quick query to find average missions a year.
+![image](https://github.com/user-attachments/assets/b6069a78-0eac-4a3a-8683-1f919d72aa88)
+
+Finding the years which were above average
+![image](https://github.com/user-attachments/assets/c28e23de-e4d4-4701-9219-afcaea1b247b)
 
