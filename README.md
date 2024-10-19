@@ -62,3 +62,9 @@ For the second point, I created a further CTE for the Unknown sector, but filter
 ![Query3](https://github.com/user-attachments/assets/99b0c30b-507e-481a-a15d-85c8a7a3d7a9)
 
 I am now very happy with the output and format of output for my breakdown of missions per year per sector.
+
+# Bonus EDA
+
+I thought it might also be interesting to understand the distribution of launches globally and further, how this has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicer/sliders to show time trends on a map. For places like Kazakhstan, it might be interesting to map launch data in its own graph to show if the break-up of the USSR impacted launch frequency.
+
+The data I will need for this stage will include Launch Country (parsed from Launch Site), Year and also mission count.
