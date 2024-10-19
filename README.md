@@ -8,10 +8,12 @@ Using "" I created a new table which will serve as a look-up table for company/a
 
 As a further objective, I am interested in seeing global trends in private spaceflight. While the USA has a very established private sector rocketary industry, I am interested to see which over countries globally are entering the private spaceflight fold and where potential investment in the industry would be well-placed.
 
+
 ## Table of Contents
 1. [Project Objectives]
 2. [ETL - Extract, Transform, Load]
 3. [Querying to Understand Data & Identify Trends]
+
 
 ## Project Aims
 In terms of the skills I am developing through-out this project, it would be best to explain my current level. I have previously completed similar projects using RStudio during my University studies, as well as performing a critical analysis on an alternative project of the same dataset. I am not interested in directly using these skills here, although I believe my experience on a previous project will allow me to achieve my goals with less-difficulty.
@@ -34,6 +36,7 @@ Before moving onto the next stage of this project, I wanted to create a second d
 
 For exclusively this part of the project, I utilised generative AI to streamline a specific part of the data preparation process—creating a table of existing company names and classifying them as public or private sector. By automating this step, I was able to focus more on the deeper analysis and insights, ensuring a more efficient workflow. AI tools were used responsibly and did not influence the core data analysis, but instead acted as a means to enhance productivity and accuracy during the initial data collection phase. In order to cross to ensure the resultant table returned the exact index of companies as the initial data set, I used an EXACT function which confirmed consistency across the two datasets. I saved this table as space_agencies.csv.
 
+
 ## Exploratory Data Analysis with SQL
 
 Quick query to find average missions a year.
@@ -49,8 +52,8 @@ What I am interested in now I want to see how the composition of launches based 
 ![Query2](https://github.com/user-attachments/assets/79ec5af8-6d84-479e-abb8-52a9c4923d55)
 
 After running this query, I was mostly pleased with how the data was returned except for two things:
-* In 1957-58 there were no Private sector space flights. Rather than having no entry, for the purpose of further analysis I would like to include them with 0 values to reflect the structure highlighted in green.
-* Also note the Unknown entry in 1958. This is the only unknown entry in the dataset and given this occurred over 60 years ago, this is not easy to remediate. As such I want to include an unknown field for 1958, but not for any other years as this would create more noise.
+* In 1957-58 there were no Private sector space flights. Rather than having no entry, for the purpose of further analysis I would like to include them with 0 values to reflect the output highlighted in green.
+* Also note the 'Unknown' entry in 1958. This is the only 'Unknown' entry in the dataset and given this occurred over 60 years ago, this is not easy to remediate. As such I want to include an Unknown field for 1958, but not for any other years as this would create more noise.
 
 In order to address the first point, I decided to introduce a series of CTEs to my query to create lookup tables for all combinations of year and sector. I used the union function to append the Public and Private tables together, before joining to the orignal launch data to populate the launch counts. Using the coalesce function, I was able to draw down the launch count or map 0 if no launches occured.
 
