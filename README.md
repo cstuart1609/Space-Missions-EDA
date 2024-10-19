@@ -46,13 +46,16 @@ Now I am just curious to see which years were above this average - I had to use 
 
 What I am interested in now I want to see how the composition of launches based on sector changes over time, using a count of total missions. I will use joins to incorporate my generated sector and company information.
 
-![image](https://github.com/user-attachments/assets/6c21dbc3-fc09-4e62-a9b3-ac7245e234f5)
+![Query2](https://github.com/user-attachments/assets/79ec5af8-6d84-479e-abb8-52a9c4923d55)
 
-After running this query, I was mostly pleased with how the data was returned except for two things
-* In 1957-58 there were no Private sector space flights. Rather than having no entry, for the purpose of further analysis I would like to include them with 0 values.
+After running this query, I was mostly pleased with how the data was returned except for two things:
+* In 1957-58 there were no Private sector space flights. Rather than having no entry, for the purpose of further analysis I would like to include them with 0 values to reflect the structure highlighted in green.
 * Also note the Unknown entry in 1958. This is the only unknown entry in the dataset and given this occurred over 60 years ago, this is not easy to remediate. As such I want to include an unknown field for 1958, but not for any other years as this would create more noise.
 
 In order to address the first point, I decided to introduce a series of CTEs to my query to create lookup tables for all combinations of year and sector. I used the union function to append the Public and Private tables together, before joining to the orignal launch data to populate the launch counts. Using the coalesce function, I was able to draw down the launch count or map 0 if no launches occured.
 
 For the second point, I created a further CTE for the Unknown sector, but filtered to only show 1958 to reduce noise as mentioned. Given the size of this dataset, it was quite easy to notice unknown as the only entry, however in a larger dataset, I would further explore how common an occurance unknown was before deciding to filter.
 
+![Query3](https://github.com/user-attachments/assets/99b0c30b-507e-481a-a15d-85c8a7a3d7a9)
+
+I am now very happy with the output and format of output for my breakdown of missions per year per sector.
