@@ -4,7 +4,7 @@
 ## Project Brief
 Space Missions is a dataset which shows a Global rocket launches between 1957-2022. I will performing some initial ETL on the dataset using Power Query before creating a database within DB Browser for SQLite.
 
-Using "" I created a new table which will serve as a look-up table for company/agencies behind the rocket launches. My reasoning behind this is because I wanted to understand trends over time based on volume and success of launches depending on which sector funded and performed the launch.
+With the use of Generative AI, I created a new table which will serve as a look-up table for company/agencies behind the rocket launches. My reasoning behind this is because I wanted to understand trends over time based on volume and success of launches depending on which sector funded and performed the launch.
 
 As a further objective, I am interested in seeing global trends in private spaceflight. While the USA has a very established private sector rocketary industry, I am interested to see which over countries globally are entering the private spaceflight fold and where potential investment in the industry would be well-placed.
 
@@ -24,7 +24,9 @@ The skill that I am looking to develop most in this project is my ability to pro
 
 ## ETL
 
-Performing my ETL within Excel, note the error in the date field with all years showing as 30/12/1899, as there is already a year field, I shall simply remove this data as it is unimportant to my analysis.
+For this project I am performing my ETL within Excel. While I have experiencing doing so with direct commands in R, I opted to use Excel as it is far more efficient for a project like this, given the relatively small size of the datset. This being said, I am determined to learn Python for situations where Excel is not suitable, I shall explore this in a later project.
+
+I imported the CSV directly into Power Query and scanned the data very quicky to identify any burning fires. Note the error in the date field with all years showing as 30/12/1899, as there is already a year field, I shall simply remove this data as it is unimportant to my analysis.
 
 ![image](https://github.com/user-attachments/assets/01295f51-1176-45b0-8682-b1303dae8082)
 
@@ -39,11 +41,11 @@ For exclusively this part of the project, I utilised generative AI to streamline
 
 ## Exploratory Data Analysis with SQL
 
-Quick query to find average missions a year.
+To get a better understanding of my data, as well as an insight into the scale of launches per year, I performed a quick query to find average missions a year.
 
 ![image](https://github.com/user-attachments/assets/b6069a78-0eac-4a3a-8683-1f919d72aa88)
 
-Now I am just curious to see which years were above this average - I had to use a UNION function to further include the average entry for comparison purposes. Notice the 19 year gap between 1997 and 2016, likely due to a combination of Shuttle redundancy and economic factors.
+Now I am just curious to see which years were above this average - I had to use a UNION function to further include the average entry for comparison purposes. Notice the 19 year gap between 1997 and 2016, likely due to a combination of Shuttle redundancy and economic factors. As an early hypothesis, it is interesting to note that on either side of this hiatus, there is a marked shift from public to private sector launches.
 
 ![Screenshot 2024-10-17 223656](https://github.com/user-attachments/assets/c4f78402-398e-4100-8775-307a0b806d54)
 
@@ -67,4 +69,26 @@ I am now very happy with the output and format of output for my breakdown of mis
 
 I thought it might also be interesting to understand the distribution of launches globally and further, how this has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicer/sliders to show time trends on a map. For places like Kazakhstan, it might be interesting to map launch data in its own graph to show if the break-up of the USSR impacted launch frequency.
 
-The data I will need for this stage will include Launch Country (parsed from Launch Site), Year and also mission count.
+The data I will need for this stage will include Launch Country (parsed from Launch Site), Year and also mission count. Before extraction of Launch Country, the result is very noisy with long strings of launchpad designations, launch complexes and subregions. I need to tweak the Location row. As opposed to standardised text strings like EmployeeId etc., I am unable to use the substr function as there is no consistent start to Country name within each string. I must use the final delimeter.
+
+![image](https://github.com/user-attachments/assets/f20cbbd0-0b02-42fe-9fef-734664c80198)
+
+As I am using SQLite in this project, it is slightly more difficult to perform this function than in PostgreSQL where I could simply use a SPLIT_PART function to categorically split by delim.
+
+In fact, after attempting a number of work arounds, my version of DB Browser for SQLite does not support REVERSE or negative indexing of INSTR functions. As a result, I made the decison to return to the ETL stage and delimit within Power Query and create a new missions table variant this gives a greater focus to location. I will add this new table to the database as space_locations.
+
+
+* So upon doing this addition ETL I discovered some historical quirks within my dataset. Namely any Missions launched from 'France', amounting to 318 missions. Not a single one of these within the dataset are launched from mainland France (4 from Algeria and 314 from French Guiana). This presented a challenge for me because with my objective of mapping launches geographically I want the location tagged geographically but still want accredit France with the launch - I can do this via the space_agencies table which accredits the launching agency to the Country which operates it. This will acredit some launches instead to 'Joint' but as a summary statistic, I am okay with this.
+
+As a first step, I would parse out the last component of the Location column as 'initial_country'
+
+* A further complication was that the launch location was occassionally not affiliated with a country but instead another geographical region, such as 'Pacific Ocean', 'Yellow Sea' and in one case 'New Mexico'. I also noticed an error where an Iranian launch did not include Iran in the location, instead pulling the launch site in as initial country.
+
+  ![image](https://github.com/user-attachments/assets/03153165-eefa-415b-a728-da995fde0cc3)
+  
+In order to address both complications, I opted to create a custom column that would transform the outputs for the missions subject to the above challenges. Using a series of IF statements within M Code, I created the #launch_geo# column which I would use as my country field for geo mapping.
+
+![ETL3](https://github.com/user-attachments/assets/32dd20e3-8d0c-449d-83a1-fb9ccd580708)
+
+
+
