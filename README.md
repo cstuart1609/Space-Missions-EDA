@@ -86,9 +86,14 @@ As a first step, I would parse out the last component of the Location column as 
 
   ![image](https://github.com/user-attachments/assets/03153165-eefa-415b-a728-da995fde0cc3)
   
-In order to address both complications, I opted to create a custom column that would transform the outputs for the missions subject to the above challenges. Using a series of IF statements within M Code, I created the #launch_geo# column which I would use as my country field for geo mapping.
+In order to address both complications, I opted to create a custom column that would transform the outputs for the missions subject to the above challenges. Using a series of IF statements within M Code, I created the launch_geo column which I would use as my country field for geo mapping.
 
-![ETL3](https://github.com/user-attachments/assets/32dd20e3-8d0c-449d-83a1-fb9ccd580708)
+As part of my ongoing improvement of best practice, I formatted the new columns in lower case and with _ instead of spaces for greater efficiency when querying.
+
+![ETL3](https://github.com/user-attachments/assets/b2b1bad7-0d3c-42b9-a051-7a6b0c9f5ffc)
+
+I now saved the new table as space_location.csv which I will now add to my database in DB Browser.
+Note: There was a variety of locations within the USA, Russia and China such as Marshall Islands. Although this would have made for a more interesting graphic, I decided to group these as best as possible as it would make for a more powerful visualisations. If was solely interested in mapping the precise location of each launch, this is something I would explore, however this does not fall within this projects objectives. I consider a distinction between this extrapolating launch sites under 'France' due to broader context.
 
 
 
