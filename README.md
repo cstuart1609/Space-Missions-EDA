@@ -103,6 +103,16 @@ As expected, given common knowledge of space exploration, the USA and Russia fea
 
 I'd now like to do further analysis on launch locations by also including the agency type, agency country of origin and year. The reason for this is to see how often the launch geo corresponds with the agency country of origin and if there is a difference in this trend between public and private sector.
 
+![image](https://github.com/user-attachments/assets/4aa4777b-301f-4da1-83b7-4d9ec049c481)
+
+![image](https://github.com/user-attachments/assets/9c998370-5192-4751-b7bc-72cf5e9eff95)
+
+Now I am curious to find launch geos that are favoured for private launches. I only want locations where both Public and Private launches have occurred and when COUNT(PUBLIC)<COUNT(PRIVATE).
+
+![image](https://github.com/user-attachments/assets/6c21d0e7-9899-4405-a18d-d17303a6a258)
+
+The USA, Japan and French Guiana all have launched an array of missions but tend to be primarily private launches. A naunce here is that many French Guiana launches are operated by Arianespace, a private French company that is the world's first commercial launch service provider and flights are fundamentally a joint venture between the Public and Private sectors. For the purpose of this project, I am happy that these launches are catergorised as Private as it reflects the wider growing involvement of the private sector in spaceflight.
+
 
 
 ## Project criticisms
