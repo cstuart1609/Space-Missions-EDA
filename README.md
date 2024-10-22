@@ -116,7 +116,9 @@ It might be surprising to see the scale of the disparity between public and priv
 
 The USA, Japan and French Guiana all have launched an array of missions but tend to be primarily private launches. A naunce here is that many French Guiana launches are operated by Arianespace, a private French company that is the world's first commercial launch service provider and flights are fundamentally a joint venture between the Public and Private sectors. For the purpose of this project, I am happy that these launches are catergorised as Private as it reflects the wider growing involvement of the private sector in spaceflight.
 
+As my finalpiece of exploratory data analysis, I want to identify which agency launched the most missions per year. This will be interesting to see how launch volumes have changed over time and also the change in environment of leading space agencies/companies.
 
+![image](https://github.com/user-attachments/assets/fec8c370-b9f8-4478-a9f9-1bb1fc6b90d3)
 
 ## Project criticisms
 
