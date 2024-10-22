@@ -95,5 +95,8 @@ As part of my ongoing improvement of best practice, I formatted the new columns 
 I now saved the new table as space_location.csv which I will now add to my database in DB Browser.
 Note: There was a variety of locations within the USA, Russia and China such as Marshall Islands. Although this would have made for a more interesting graphic, I decided to group these as best as possible as it would make for a more powerful visualisations. If was solely interested in mapping the precise location of each launch, this is something I would explore, however this does not fall within this projects objectives. I consider a distinction between this extrapolating launch sites under 'France' due to broader context.
 
+As a result of my extensive ETL on this location data, I am able to extract the information I want with a relatively simple query (note: 21 unique launch geos were returned within the data). 
 
+![image](https://github.com/user-attachments/assets/8e0c7b73-cf89-4321-a1ff-70fdb6fe579f)
 
+As expected, given common knowledge of space exploration, the USA and Russia feature heavily on this list, with a large number from former Soviet Republic Kazahkstan. With launches from French Guiana corresponding with the efforts of the European Space Agency (ESA); China and Europe represent the 'best of the rest'. Given my awareness of space flight trends, India's inclusion in the Top 7 reflects a remarkable and rapid development of their space program in recent years, something I expect to represented visually during my visualisation phase.
