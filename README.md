@@ -97,6 +97,6 @@ Note: There was a variety of locations within the USA, Russia and China such as 
 
 As a result of my extensive ETL on this location data, I am able to extract the information I want with a relatively simple query (note: 21 unique launch geos were returned within the data). 
 
-![image](https://github.com/user-attachments/assets/8e0c7b73-cf89-4321-a1ff-70fdb6fe579f)
+![Query4](https://github.com/user-attachments/assets/63f8ba21-0b65-4c97-8467-8ede4b8c8836)
 
 As expected, given common knowledge of space exploration, the USA and Russia feature heavily on this list, with a large number from former Soviet Republic Kazahkstan. With launches from French Guiana corresponding with the efforts of the European Space Agency (ESA); China and Europe represent the 'best of the rest'. Given my awareness of space flight trends, India's inclusion in the Top 7 reflects a remarkable and rapid development of their space program in recent years, something I expect to represented visually during my visualisation phase.
