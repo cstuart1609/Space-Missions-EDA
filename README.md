@@ -106,11 +106,11 @@ I'd now like to do further analysis on launch locations by also including the ag
 ![image](https://github.com/user-attachments/assets/4aa4777b-301f-4da1-83b7-4d9ec049c481)
 
 Although this view offers no summary or analytical value, I think it is quite a nice way to present the full dataset in the context of this project. It also serves as a good base to perform further analysis on.
-I would now like summarise the missions based on launch geo and also the sector behind the launch. This will although to confirm the previous to
+I would now like summarise the missions based on launch geo and also the sector behind the launch. This is similar to a previous query but splits out missions across sector.
+
 ![image](https://github.com/user-attachments/assets/9c998370-5192-4751-b7bc-72cf5e9eff95)
 
-
-Now I am curious to find launch geos that are favoured for private launches. I only want locations where both Public and Private launches have occurred and when COUNT(PUBLIC)<COUNT(PRIVATE).
+It might be surprising to see the scale of the disparity between public and private sector launches in the USA considering the prevalence of NASA in this industry. As a result of this, now I am curious to find launch geos that are favoured for private launches. I only want locations where both Public and Private launches have occurred and when COUNT(PUBLIC)<COUNT(PRIVATE).
 
 ![image](https://github.com/user-attachments/assets/6c21d0e7-9899-4405-a18d-d17303a6a258)
 
