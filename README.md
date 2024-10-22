@@ -118,7 +118,8 @@ The USA, Japan and French Guiana all have launched an array of missions but tend
 
 As my finalpiece of exploratory data analysis, I want to identify which agency launched the most missions per year. This will be interesting to see how launch volumes have changed over time and also the change in environment of leading space agencies/companies.
 
-![image](https://github.com/user-attachments/assets/fec8c370-b9f8-4478-a9f9-1bb1fc6b90d3)
+![Query5](https://github.com/user-attachments/assets/a5bf0c0f-a081-4463-8a59-0e64879c36d7)
+
 
 ## Project criticisms
 
