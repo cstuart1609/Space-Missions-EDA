@@ -100,3 +100,13 @@ As a result of my extensive ETL on this location data, I am able to extract the 
 ![Query4](https://github.com/user-attachments/assets/63f8ba21-0b65-4c97-8467-8ede4b8c8836)
 
 As expected, given common knowledge of space exploration, the USA and Russia feature heavily on this list, with a large number from former Soviet Republic Kazahkstan. With launches from French Guiana corresponding with the efforts of the European Space Agency (ESA); China and Europe represent the 'best of the rest'. Given my awareness of space flight trends, India's inclusion in the Top 7 reflects a remarkable and rapid development of their space program in recent years, something I expect to represented visually during my visualisation phase.
+
+I'd now like to do further analysis on launch locations by also including the agency type, agency country of origin and year. The reason for this is to see how often the launch geo corresponds with the agency country of origin and if there is a difference in this trend between public and private sector.
+
+
+
+## Project criticisms
+
+* Data accuracy of AI-generated table was an issue. A few examples of errors included listing ABMA (Army Ballistic Missile Agency) as AMBA and subsequently being unable to identify it's sector, as well as RAE (Royal Aerospace Establishment) being incorrectly listed as being of Brazilian in origin instead of from Great Britain. Although I still believe using Generative AI was the most efficient approach to creating what has turned out to be an insightful further dataset, in the future I will take greater caution in this approach and exercise a greater degree of scrutiny when viewing the inital results.
+* Another error I encountered was of my own doing. This error relates to how I saved and imported the space_locations table as an incorrect unicode. My knowledge of unicodes is limited alothough I tried to consistently use UTF-8 throughout, I must have not done so for this table. I realised this when joining the location and agency tables a receiving null results because the former table had incorrectly stored Armée de l''Air, producing an error instead of the special character. This created a headache and I had to manually UPDATE the table with the correct format. This is something I hope will not be repeated in the future - something I will mitigate by stating and understanding the unicode required for my data at the beginning.
+
