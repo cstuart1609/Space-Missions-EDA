@@ -2,12 +2,8 @@
 
 
 ## Project Brief
-Space Missions is a dataset which shows a Global rocket launches between 1957-2022. I will performing some initial ETL on the dataset using Power Query before creating a database within DB Browser for SQLite.
 
-With the use of Generative AI, I created a new table which will serve as a look-up table for company/agencies behind the rocket launches. My reasoning behind this is because I wanted to understand trends over time based on volume and success of launches depending on which sector funded and performed the launch.
-
-As a further objective, I am interested in seeing global trends in private spaceflight. While the USA has a very established private sector rocketary industry, I am interested to see which over countries globally are entering the private spaceflight fold and where potential investment in the industry would be well-placed.
-
+The Space Missions dataset encompasses a comprehensive record of global rocket launches spanning from 1957 to 2022. This dataset serves as a rich resource for analysing the evolution of space missions over time, providing insights into various factors influencing launch trends. My project aims to conduct an Exploratory Data Analysis (EDA) on this dataset, employing a systematic approach to data processing and visualisation.
 
 ## Table of Contents
 1. [Project Objectives]
@@ -16,13 +12,31 @@ As a further objective, I am interested in seeing global trends in private space
 
 
 ## Project Aims
-In terms of the skills I am developing through-out this project, it would be best to explain my current level. I have previously completed similar projects using RStudio during my University studies, as well as performing a critical analysis on an alternative project of the same dataset. I am not interested in directly using these skills here, although I believe my experience on a previous project will allow me to achieve my goals with less-difficulty.
+I will perform initial ETL (Extract, Transform, Load) operations on the dataset using Power Query to prepare it for further analysis. This preparation is crucial for ensuring data integrity and consistency, allowing for meaningful insights to be derived. This dataset is not my own and may not present the data in way I deem efficient or intuitive, so being able to manipulate how the data is stored is a vital step.
 
-Instead, I will be using Excel to perform some ETL on the data, where I will make use of my experience using Power Query. To conduct my exploratory data analysis I will be tapping into my SQL skillset, this is something I have developed organically in my professional life where I often query customer and sales data sets. I want to use SQLite as it is different to the SQL I use via Snowflake and in order to build out a dataset from scratch. The reason for this is to A) create tables from scratch and B) to perform joins in order to recover further company and sector detail depending on a range of flights.
+Leveraging Generative AI, I created a new table that serves as a lookup table for the companies and agencies behind the rocket launches. This additional layer of data is vital for understanding trends over time based on the volume and success of launches, specifically examining how these factors vary according to whether the launch was funded and performed by public or private sector entities.
 
-The skill that I am looking to develop most in this project is my ability to produce powerful and concise visualisations using Power BI. It is not a package I have used before, however I have used various DAX functions when using Power Pivot within the Excel framework. At work I have created various dashboards using our software "Salesforce" and used ggplot2 during my university projects so I am hopeful that this will prove quite intuitive.
+I aim to explore global trends in private spaceflight, as well as the industry in general. While the USA boasts a robust and established private sector in the space industry, it is essential to identify which other countries are emerging in this field. Understanding these trends will provide insights into potential investment opportunities and the global landscape of the space industry.
 
-## ETL
+I am also curious to see how investment, public interest and broader geopolitcal events influence the development of the space industry. It is important to identify such patterns to ensure that short-term events and political cycles do not inhabit the ability of our species to explore the unknown.
+
+## Skill Development and Enrichment
+
+Throughout this project, I will focus on developing several key skills. My previous experience includes completing similar projects using RStudio during my university studies, where I conducted critical analyses of the same dataset. Although I am not directly applying these skills here, I believe my background will enable me to achieve my goals more efficiently.
+
+For the ETL process, I will utilise Excel and Power Query, leveraging my familiarity with these tools. To conduct the exploratory data analysis, I will apply my SQL skill set, which I have developed organically in my professional life by querying customer and sales datasets. I have chosen to use SQLite as it differs from the SQL I typically work with via Snowflake, allowing me to build a dataset from scratch. This choice will enable me to:
+
+* Create tables from scratch.
+* Perform joins to recover additional company and sector details based on various flights.
+
+The primary skill I am keen to develop in this project is the ability to produce powerful and concise visualisations using Power BI. While I have not previously used this package, I have experience with various DAX functions in Power Pivot within Excel. My work experience includes creating dashboards using Salesforce, and I have also utilised ggplot2 via RStudio during my university projects. I am hopeful that this familiarity will make the transition to Power BI intuitive.
+
+## Entity Relationship Diagram
+
+![ERD](https://github.com/user-attachments/assets/6caa00a5-9412-441f-b480-40817ef55f39)
+
+
+## Data ETL - Extract, Transform, Load
 
 For this project I am performing my ETL within Excel. While I have experiencing doing so with direct commands in R, I opted to use Excel as it is far more efficient for a project like this, given the relatively small size of the datset. This being said, I am determined to learn Python for situations where Excel is not suitable, I shall explore this in a later project.
 
