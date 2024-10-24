@@ -34,8 +34,6 @@ The primary skill I am keen to develop in this project is the ability to produce
 
 ## Data Dictionary
 
-# Tables
-
 Find an explanation of each column within the tables of the dataset (where columns appear more than once, they are not repeated)
 
 * space_missions:
@@ -171,13 +169,16 @@ This was an incredibly insightful result, despite the slightly complex query. No
 
 ## Project criticisms
 
-* Data accuracy of AI-generated table was an issue. A few examples of errors included listing ABMA (Army Ballistic Missile Agency) as AMBA and subsequently being unable to identify it's sector, as well as RAE (Royal Aerospace Establishment) being incorrectly listed as being of Brazilian in origin instead of from Great Britain. Although I still believe using Generative AI was the most efficient approach to creating what has turned out to be an insightful further dataset, in the future I will take greater caution in this approach and exercise a greater degree of scrutiny when viewing the inital results. Below is an example of how I corrected the data within each table. I had similar issues with ISA (being mistakenly identified as the Indian Space Agency, rather than the Iranian Space Agency).
+### Data Accuracy
+Data accuracy of AI-generated table was an issue. A few examples of errors included listing ABMA (Army Ballistic Missile Agency) as AMBA and subsequently being unable to identify it's sector, as well as RAE (Royal Aerospace Establishment) being incorrectly listed as being of Brazilian in origin instead of from Great Britain. Although I still believe using Generative AI was the most efficient approach to creating what has turned out to be an insightful further dataset, in the future I will take greater caution in this approach and exercise a greater degree of scrutiny when viewing the inital results. Below is an example of how I corrected the data within each table. I had similar issues with ISA (being mistakenly identified as the Indian Space Agency, rather than the Iranian Space Agency).
 
 ![Querycorrection2](https://github.com/user-attachments/assets/d762c83f-d629-4685-8ed4-f18cefa0f900)
 
 
-* Another error I encountered was of my own doing. This error relates to how I saved and imported the space_locations table as an incorrect unicode. My knowledge of unicodes is limited alothough I tried to consistently use UTF-8 throughout, I must have not done so for this table. I realised this when joining the location and agency tables a receiving null results because the former table had incorrectly stored Armée de l''Air, producing an error instead of the special character. This created a headache and I had to manually UPDATE the table with the correct format. This is something I hope will not be repeated in the future - something I will mitigate by stating and understanding the unicode required for my data at the beginning.
+### Format/Data type issues
+Another error I encountered was of my own doing. This error relates to how I saved and imported the space_locations table as an incorrect unicode. My knowledge of unicodes is limited alothough I tried to consistently use UTF-8 throughout, I must have not done so for this table. I realised this when joining the location and agency tables a receiving null results because the former table had incorrectly stored Armée de l''Air, producing an error instead of the special character. This created a headache and I had to manually UPDATE the table with the correct format. This is something I hope will not be repeated in the future - something I will mitigate by stating and understanding the unicode required for my data at the beginning.
 
 ![image](https://github.com/user-attachments/assets/d51b941b-186b-482d-a1e9-5e6e50d4ddf7)
 
-
+### Naming Conventions
+Less important but still an area to improve is the constant use of best practice naming conventions. There are capitalised fields and fields not separated with _ that appear in the data which I would like to improve in later projects.
