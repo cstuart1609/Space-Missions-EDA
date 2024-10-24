@@ -31,9 +31,41 @@ For the ETL process, I will utilise Excel and Power Query, leveraging my familia
 
 The primary skill I am keen to develop in this project is the ability to produce powerful and concise visualisations using Power BI. While I have not previously used this package, I have experience with various DAX functions in Power Pivot within Excel. My work experience includes creating dashboards using Salesforce, and I have also utilised ggplot2 via RStudio during my university projects. I am hopeful that this familiarity will make the transition to Power BI intuitive.
 
+
+## Data Dictionary
+
+# Tables
+
+Find an explanation of each column within the tables of the dataset (where columns appear more than once, they are not repeated)
+
+* space_missions:
+    - company: Short name code of launching agency
+    - location: Full launch location commonly composed of launch pad, launch complex, region and country
+    - year: Year of launch
+    - LaunchTime: 24hr formatted time of launch
+    - Rocket: Name of rocket used in launch
+    - mission_status: Numeric value representing mission status as 0: Failure and 1: Success
+    - rocket_status: Text string indicating whether the rocket used in the launch is still in active use or has been retired
+    - price: Cost of the launch (redundant field)
+    - mission: Full name of the mission, used as primary key
+ 
+* space_agencies:
+    - full_name_summary: Full name of launching agency to explain and identify more information around the agency itself
+    - country: The country which operates the agency or company - when multiple countries are behind an agency, such as European Space Agency, this will be filled as 'Joint'
+    - sector: This column indicates whether the agency is privately or publically operated.
+ 
+* space_locations:
+    - launch_geo: This field indicates which geographic region the mission occured - the default is the Country of launch, although some launches took place in neutral zones such as Oceans/Seas
+    - initial_country: Similar to the launch_geo field, this field is an intermediate field which captures the highest order in the location field. As explored later in my analysis, this was not suitable for directly contributing launches to geographical regions
+ 
+
 ## Entity Relationship Diagram
 
 ![ERD](https://github.com/user-attachments/assets/6caa00a5-9412-441f-b480-40817ef55f39)
+
+The database behind this project consists of 3 tables - space_missions, space_agencies, space_locations - the first table being the original dataset downloaded from Kaggle. The latter two tables were of my own design with the second presenting deeper analysis into each agency and the location table presenting a format that aids the geoegraphical analysis I will perform. 
+
+'Mission' is the primary key in both missions and locations linking the tables in a one-to-one relationship. Meanwhile, the agencies table primary key is company with a one-to-many relationship with both the missions and location table. This dataset has a relatively simple structure with the agencies table acting as a look-up table, with both missions and locations as indexed tables - albeit a different variants of the same data.
 
 
 ## Data ETL - Extract, Transform, Load
