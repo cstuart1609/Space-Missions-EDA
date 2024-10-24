@@ -36,25 +36,25 @@ The primary skill I am keen to develop in this project is the ability to produce
 
 Find an explanation of each column within the tables of the dataset (where columns appear more than once, they are not repeated)
 
-* space_missions:
-    - company: Short name code of launching agency
-    - location: Full launch location commonly composed of launch pad, launch complex, region and country
-    - year: Year of launch
-    - LaunchTime: 24hr formatted time of launch
-    - Rocket: Name of rocket used in launch
-    - mission_status: Numeric value representing mission status as 0: Failure and 1: Success
-    - rocket_status: Text string indicating whether the rocket used in the launch is still in active use or has been retired
-    - price: Cost of the launch (redundant field)
-    - mission: Full name of the mission, used as primary key
+* __space_missions__:
+    - _company_: Short name code of launching agency
+    - _location_: Full launch location commonly composed of launch pad, launch complex, region and country
+    - _year_: Year of launch
+    - _LaunchTime_: 24hr formatted time of launch
+    - _Rocket_: Name of rocket used in launch
+    - _mission_status_: Numeric value representing mission status as 0: Failure and 1: Success
+    - _rocket_status_: Text string indicating whether the rocket used in the launch is still in active use or has been retired
+    - _price_: Cost of the launch (redundant field)
+    - _mission_: Full name of the mission, used as primary key
  
-* space_agencies:
-    - full_name_summary: Full name of launching agency to explain and identify more information around the agency itself
-    - country: The country which operates the agency or company - when multiple countries are behind an agency, such as European Space Agency, this will be filled as 'Joint'
-    - sector: This column indicates whether the agency is privately or publically operated.
+* __space_agencies__:
+    - _full_name_summary_: Full name of launching agency to explain and identify more information around the agency itself
+    - _country_: The country which operates the agency or company - when multiple countries are behind an agency, such as European Space Agency, this will be filled as 'Joint'
+    - _sector_: This column indicates whether the agency is privately or publically operated.
  
-* space_locations:
-    - launch_geo: This field indicates which geographic region the mission occured - the default is the Country of launch, although some launches took place in neutral zones such as Oceans/Seas
-    - initial_country: Similar to the launch_geo field, this field is an intermediate field which captures the highest order in the location field. As explored later in my analysis, this was not suitable for directly contributing launches to geographical regions
+* __space_locations__:
+    - _launch_geo_: This field indicates which geographic region the mission occured - the default is the Country of launch, although some launches took place in neutral zones such as Oceans/Seas
+    - _initial_country_: Similar to the launch_geo field, this field is an intermediate field which captures the highest order in the location field. As explored later in my analysis, this was not suitable for directly contributing launches to geographical regions
  
 
 ## Entity Relationship Diagram
