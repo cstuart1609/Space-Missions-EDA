@@ -10,7 +10,7 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 2. [Skill Development & Enrichment](#skills-development-&-enrichment)
 3. [Data Dictionary](#data-dictionary)
 4. [Entity Relationship Diagram](#entity-relationship-diagram)
-5. [Data ETL in Power Query - Extract, Transform, Load](#data-etl-in-power-query)
+5. [Data ETL in Power Query: Extract, Transform, Load](#data-etl-in-power-query:-extract,-transform,-load)
 6. Exploratory Data Analysis and Database Creation with SQL
 7. Bonus EDA and Data Commentary
 8. Data Visualisations in Power BI
