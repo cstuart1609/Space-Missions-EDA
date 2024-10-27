@@ -11,7 +11,7 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 3. [Data Dictionary](#data-dictionary)
 4. [Entity Relationship Diagram](#entity-relationship-diagram)
 5. [Data ETL in Power Query](#data-etl-in-power-query)
-6. [Exploratory Data Analysis and Database Creation with SQL](#exploratory-data-analysis=and-database-creation-with-sql)
+6. [Exploratory Data Analysis and Database Creation with SQL](#exploratory-data-analysis-and-database-creation-with-sql)
 7. Bonus EDA and Data Commentary
 8. Data Visualisations in Power BI
 9. Project Criticisms
