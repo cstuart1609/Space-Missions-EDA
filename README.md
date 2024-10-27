@@ -166,6 +166,25 @@ As my finalpiece of exploratory data analysis, I want to identify which agency l
 
 This was an incredibly insightful result, despite the slightly complex query. Notice the dominance of the Soviet agency (RSVN USSR) between 1963-1991, with the end of this dominance coincidicing directly with the dissolution of the Soviet Union that same year. Also note the 2000s when the highest launching agency reached double digits just twice, reflecting my hypothesis that the slow retirement of the space shuttle and wider economic factors contributed to a downturn in spaceflight investment, political ambition and concerns over safety.
 
+## Data Visualisations
+
+The next and final practical stage of this project is visualisation the data that I have created, cleaned, modelled and briefly reviewing. This will be carried out within Power BI Desktop where I used a ODBC driver to import data from space_missions database on SQLite. Rather than including links to the visuals themselves, I will instead include screenshots of the graphic and then include a brief explanation - this is due to the license I have for Power BI, but also as it better reflects previous work in this project.
+
+Prior to this project I had little experience with this software, although was accustomed with complex visualisations via Excel, the power query function, as well as writing DAX expressions to model data further within already imported data. It is a very intuitive piece of software in my opinion with a wide array of informative pieces online and within the product itself, however I do think it is important to have a good understanding of whatever data you are dealing with in this case. 
+
+At this stage, I should explain a late hurdle that I ran into, as well as an underlying issue within the way I modelled my data based on an incorrect assumption. During my initial planning of the data, I assumed that the mission name would be a unique value for each row and as such used it as my index for both the space_missions and space_locations tables. I made this assumption because I felt there would be a standardised naming convention adopted by each agency and while this was the case for the majority of launches, there were a number of exceptions particularly when the launch was an early stage test for a new rocket - for example, there were four identical mission_names for early stage launches for the SpaceX Starship (see below).
+
+![image](https://github.com/user-attachments/assets/4b4159dd-8696-4c6e-aaf5-09a84628cf9c)
+
+I had a choice of solutions to create a unique index/ID field, each with various implications; the first, creating an ID from combining tables - for example combining mission_name with year - was impossible due to some identically named launches within the same year. My only alternative now was index the data with a brand new mission_id field, indexed by number. This is not something I was able to do within Power BI because I needed to ensure that the unique ID was assigned to the same launch and it was impossible for me to ensure that both the space_missions and space_locations were ordered identically. Instead I had to create a new database with the mission_id field added to my initial downloaded data from Kaggle, retreading my steps of creating the space_locations table for this. Although this felt like an annoying backward step, it was an important one to ensure data integrity and accuracy when visualising the data. 
+
+I then ensured that this changed had worked, by ensuring Power BI recognised a one-to-one relationship between mission_id.space_missions and mission_id.space_locations.
+
+As outlined in my project brief and reflecting the work done within SQL, were a number of key visuaulisations I needed to create:
+* Trend of overall spaceflights over-time as well as a breakdown of flights by sector - in order to draw conclusions on growth of private sector and impact of real-world conditions on public/Government-funded spaceflight.
+* Insight into composition of overall flights by Sector, as well as insight into the Country of origin for the agency faciliating the launch - also shows which sectors have contributed to the most flights and also which countries are chief proponents of private spaceflight.
+* Mapping of flight data and mission counts by launch geography and also agency country of origin
+* Bonus is to see if I can show how flights by location have changed over time
 
 ## Project criticisms
 
