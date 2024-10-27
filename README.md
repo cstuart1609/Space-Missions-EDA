@@ -6,9 +6,16 @@
 The Space Missions dataset encompasses a comprehensive record of global rocket launches spanning from 1957 to 2022. This dataset serves as a rich resource for analysing the evolution of space missions over time, providing insights into various factors influencing launch trends. My project aims to conduct an Exploratory Data Analysis (EDA) on this dataset, employing a systematic approach to data processing and visualisation.
 
 ## Table of Contents
-1. [Project Objectives]
-2. [ETL - Extract, Transform, Load]
-3. [Querying to Understand Data & Identify Trends]
+1. Project Aims (#project-aims)
+2. Skill Development & Enrichment (#skills-development-&-enrichment)
+3. Data Dictionary (#data-dictionary)
+4. Entity Relationship Diagram
+5. Data ETL in Power Query - Extract, Transform, Load
+6. Exploratory Data Analysis and Database Creation with SQL
+7. Bonus EDA and Data Commentary
+8. Data Visualisations in Power BI
+9. Project Criticisms
+10. Conclusions and Review of Outcomes
 
 
 ## Project Aims
@@ -22,35 +29,31 @@ I am also curious to see how investment, public interest and broader geopolitcal
 
 ## Skill Development and Enrichment
 
-Throughout this project, I will focus on developing several key skills. My previous experience includes completing similar projects using RStudio during my university studies, where I conducted critical analyses of the same dataset. Although I am not directly applying these skills here, I believe my background will enable me to achieve my goals more efficiently.
+Throughout this project,  I am focusing on developing essential skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, will serve as a solid foundation as I embark on this project. Although I am not directly applying these skills here, I believe my background will enable me to achieve my goals more efficiently.
 
-For the ETL process, I will utilise Excel and Power Query, leveraging my familiarity with these tools. To conduct the exploratory data analysis, I will apply my SQL skill set, which I have developed organically in my professional life by querying customer and sales datasets. I have chosen to use SQLite as it differs from the SQL I typically work with via Snowflake, allowing me to build a dataset from scratch. This choice will enable me to:
+For the ETL process, I chose to utilize Excel and Power Query due to their user-friendly interface and my familiarity with these tools. This will facilitate effective data cleaning and transformation. I plan to conduct the EDA using SQL, specifically with SQLite, enabling me to build datasets from scratch, perform complex joins, and recover additional details effectively.
 
-* Create tables from scratch.
-* Perform joins to recover additional company and sector details based on various flights.
-
-The primary skill I am keen to develop in this project is the ability to produce powerful and concise visualisations using Power BI. While I have not previously used this package, I have experience with various DAX functions in Power Pivot within Excel. My work experience includes creating dashboards using Salesforce, and I have also utilised ggplot2 via RStudio during my university projects. I am hopeful that this familiarity will make the transition to Power BI intuitive.
-
+I am particularly eager to enhance my visualisation skills using Power BI. While I have previously used Excel and ggplot2 in RStudio, I believe that Power BI's capabilities will allow me to create more sophisticated and interactive visualizations. I anticipate that my existing knowledge will make the transition to Power BI more intuitive.
 
 ## Data Dictionary
 
 Find an explanation of each column within the tables of the dataset (where columns appear more than once, they are not repeated)
 
 * __space_missions__:
-    - _company_: Short name code of launching agency
-    - _location_: Full launch location commonly composed of launch pad, launch complex, region and country
+    - _company_: Short name code of launching agency (e.g., NASA, SpaceX)
+    - _location_: omprehensive launch location, detailing the launch pad, launch complex, region, and country
     - _year_: Year of launch
     - _LaunchTime_: 24hr formatted time of launch
-    - _Rocket_: Name of rocket used in launch
-    - _mission_status_: Numeric value representing mission status as 0: Failure and 1: Success
+    - _Rocket_: The name of the rocket employed for the launch (e.g., Falcon 9, Atlas V)
+    - _mission_status_: Numeric representation of the mission outcome (0 for Failure, 1 for Success)
     - _rocket_status_: Text string indicating whether the rocket used in the launch is still in active use or has been retired
-    - _price_: Cost of the launch (redundant field)
-    - _mission_: Full name of the mission, used as primary key
+    - _price_: price: The cost associated with the launch (this field is deemed redundant for the analysis)
+    - _mission_: The full name of the mission, initially serving as the primary key for identifying each unique launch
  
 * __space_agencies__:
-    - _full_name_summary_: Full name of launching agency to explain and identify more information around the agency itself
-    - _country_: The country which operates the agency or company - when multiple countries are behind an agency, such as European Space Agency, this will be filled as 'Joint'
-    - _sector_: This column indicates whether the agency is privately or publically operated.
+    - _full_name_summary_: The full official name of the launching agency (e.g., National Aeronautics and Space Administration)
+    - _country_: The country where the agency or company operates (e.g., 'Joint' for agencies operating across multiple countries)
+    - _sector_: Classification of the agency as either publicly or privately operated
  
 * __space_locations__:
     - _launch_geo_: This field indicates which geographic region the mission occured - the default is the Country of launch, although some launches took place in neutral zones such as Oceans/Seas
@@ -68,7 +71,7 @@ The database behind this project consists of 3 tables - space_missions, space_ag
 
 ## Data ETL - Extract, Transform, Load
 
-For this project I am performing my ETL within Excel. While I have experiencing doing so with direct commands in R, I opted to use Excel as it is far more efficient for a project like this, given the relatively small size of the datset. This being said, I am determined to learn Python for situations where Excel is not suitable, I shall explore this in a later project.
+The ETL process is conducted within Excel, a choice made due to the dataset's relatively small size, which allows for effective management without overwhelming computational demands. After importing the CSV file into Power Query, I meticulously examined the dataset for errors. A notable issue identified was the datetime field erroneously displaying all years as 30/12/1899. This anomaly was resolved, removing the date aspect, as it bore no significance for the subsequent analysis.
 
 I imported the CSV directly into Power Query and scanned the data very quicky to identify any burning fires. Note the error in the date field with all years showing as 30/12/1899, as there is already a year field, I shall simply remove this data as it is unimportant to my analysis.
 
@@ -78,9 +81,9 @@ I am now happy with the data and suitably happy that it is ready to queried cons
 
 ![image](https://github.com/user-attachments/assets/3b9e617c-ae39-4d62-8608-8f0000ffdd45)
 
-Before moving onto the next stage of this project, I wanted to create a second dataset so that I could have a database with multiple tables in order to perform joins. Returning to my goal of this project, to evaluate trends in public vs private sector spaceflight, I needed to create a dataset which could tell me which flights were public or private sector. 
+Before moving onto the next stage of this project, I wanted to create a second dataset so that I could have a database with multiple tables in order to perform joins. Returning to my goal of this project, to evaluate trends in public vs private sector spaceflight, I needed to create a dataset which could classify missions as either public or private sector. 
 
-For exclusively this part of the project, I utilised generative AI to streamline a specific part of the data preparation process—creating a table of existing company names and classifying them as public or private sector. By automating this step, I was able to focus more on the deeper analysis and insights, ensuring a more efficient workflow. AI tools were used responsibly and did not influence the core data analysis, but instead acted as a means to enhance productivity and accuracy during the initial data collection phase. In order to cross to ensure the resultant table returned the exact index of companies as the initial data set, I used an EXACT function which confirmed consistency across the two datasets. I saved this table as space_agencies.csv.
+    For exclusively this part of the project, I utilised generative AI to streamline a specific part of the data preparation process—creating a table of existing company names and classifying them as public or private sector. By automating this step, I was able to focus more on the deeper analysis and insights, ensuring a more efficient workflow. AI tools were used responsibly and did not influence the core data analysis, but instead acted as a means to enhance productivity and accuracy during the initial data collection phase. To ensure the resultant table returned the exact index of companies as the initial data set, I used an EXACT function which confirmed consistency across the two datasets. I saved this table as space_agencies.csv.
 
 
 ## Exploratory Data Analysis with SQL
@@ -111,7 +114,7 @@ I am now very happy with the output and format of output for my breakdown of mis
 
 # Bonus EDA
 
-I thought it might also be interesting to understand the distribution of launches globally and further, how this has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicer/sliders to show time trends on a map. For places like Kazakhstan, it might be interesting to map launch data in its own graph to show if the break-up of the USSR impacted launch frequency.
+I thought it might also be interesting to understand the distribution of launches globally and further, how this has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicer/sliders to show time trends on a map. For places like Kazakhstan, I could map mission data in its own graph to show if the break-up of the USSR impacted launch frequency for example.
 
 The data I will need for this stage will include Launch Country (parsed from Launch Site), Year and also mission count. Before extraction of Launch Country, the result is very noisy with long strings of launchpad designations, launch complexes and subregions. I need to tweak the Location row. As opposed to standardised text strings like EmployeeId etc., I am unable to use the substr function as there is no consistent start to Country name within each string. I must use the final delimeter.
 
