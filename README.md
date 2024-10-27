@@ -222,7 +222,8 @@ Further to the previous visualisation, this graph shows how the composition spac
 
 As an alternate visualisation of launch count by country, I created a custom 'sun-burst' chart that further segmented the data by sector as well. It is interesting to note that the majority of US launches are private, whereas Russian/Soviet and Chinese launches are government-backed - reflective of the involvement of the state in their respective economies.
 
-![image](https://github.com/user-attachments/assets/cbbd60ef-0b2b-412f-bbd8-28e64d5f3eaa)
+![image](https://github.com/user-attachments/assets/9a29656c-4d89-4b0e-91f4-f3d4b8d0980e)
+
 
 ## Project criticisms
 
