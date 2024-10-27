@@ -289,3 +289,12 @@ This assumption resulted in duplicate entries in the space_missions and space_lo
 This challenge highlighted the importance of planning for potential issues with unique identifiers when structuring a database. By addressing this issue, I was able to produce more accurate insights, ultimately strengthening the quality of my analysis.
 
 ## Conclusions and Review of Outcomes
+
+### Early reflections
+The project aimed to identify and analyse any trends within the entire history of spaceflight, focussing on geography, agency-type and temporal factors. I wanted to see if there had been growth of the spaceflight industry since the space race or whether the fervour of the Cold War created an influx in interest in space that would not be repeated. My intial thoughts were that, although governments were no longer able or willing to dedicate the same budget to spaceflight, the combination of evolution of private spaceflight and emerging players like China would support the growth of the industry as a whole.
+
+* Growth and Shift in Sector Participation
+* Geographic Distribution and Strategic Launch Sites
+* Impact of Historical Events on Space Activity
+* Global Contribution and Emerging Players
+* 
