@@ -233,8 +233,16 @@ As a further interrogation of the sector breakdown, this chart shows how the 62 
 This visual is similar to the bubble chart from before - but now uses a heatmap element to show magnitude of launches. It also includes a time slicer which can show the data within a range. Below I will manipulate this to show how launch patterns have changed over the date range. Unfortunately, unlike the bubble map, the filled map variant is unable to show offshore launches.
 
 #### Launches since 2000
-![image](https://github.com/user-attachments/assets/20eea66e-3d79-4d13-86e8-27142a61925a)
+![image](https://github.com/user-attachments/assets/48d8e44b-9af8-4df3-ae7d-8ea3ddfcb999)
+This shows a significant drop-off in Russian launches, while China and French Guiana show strongly in this set. Note the number of countries with launches taking place, reflecting the presence of numerous launch sites in the modern age.
 
+#### Launches from 1957-1967 
+![image](https://github.com/user-attachments/assets/7c61a760-f3ff-4422-add4-23149af466b1)
+This range shows the first ten years of the space race, with the US once again leading the way but with significant launches in Russia and Kazakhstan (both part of the USSR at the time). 
+
+#### Launches prior to the dissolution of the Soviet Union
+![image](https://github.com/user-attachments/assets/6b18a9e3-83d2-4c69-a218-48bea1cc16d0)
+This shows the relative dominance of the USSR prior to its dissolution in 1991. At the time, the space race was truly a two-horse race - since, the field has opened up significantly.
 
 ## Project criticisms
 
