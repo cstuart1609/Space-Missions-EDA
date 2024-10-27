@@ -194,7 +194,16 @@ As outlined in my project brief and reflecting the work done within SQL, were a 
     - to create a powerful and clear picture of which countries have contributed the most to space launch numbers
 * Bonus is to see if I can show how flights by location have changed over time
     - to see if the above has changed over time and in relation to any changes in composition of pulic and private sector
- 
+
+### Count of Missions by Launch Geography
+![image](https://github.com/user-attachments/assets/9088187b-35cd-4948-be86-78c612a8aed5)
+
+This visualisation clearly shows that the USA and Russia lead the way with a similar launch count - Kazahkstan leads the rest with China and French Guiana just behind - supporting my query result earlier.
+
+### Geographical Mapping of Launch Density by Geo
+![image](https://github.com/user-attachments/assets/a6462438-c446-450a-b7c7-c594bc0a59e5)
+
+This dashboard shows the results of the previous visualisation, mapped geographically - for regions like the Yellow Sea, there are smaller spotlight graphics to show further detail. It is interesting to note that no single launch has taken place in continental Europe, in contrast with the number of European countries that have facilitated flights. With the exception of a few launches in the Barents Sea and Oceania, many historic flights have taken place close to the Equator - scientifically there are a number of reasons why this is the case but it is interesting so the importance of latitude in this manner.
 
 ## Project criticisms
 
