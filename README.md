@@ -19,6 +19,7 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 
 
 ## Project Aims
+
 I will perform initial ETL (Extract, Transform, Load) operations on the dataset using Power Query to prepare it for further analysis. This preparation is crucial for ensuring data integrity and consistency, allowing for meaningful insights to be derived. This dataset is not my own and may not present the data in way I deem efficient or intuitive, so being able to manipulate how the data is stored is a vital step.
 
 Leveraging Generative AI, I created a new table that serves as a lookup table for the companies and agencies behind the rocket launches. This additional layer of data is vital for understanding trends over time based on the volume and success of launches, specifically examining how these factors vary according to whether the launch was funded and performed by public or private sector entities.
@@ -27,6 +28,7 @@ I aim to explore global trends in private spaceflight, as well as the industry i
 
 I am also curious to see how investment, public interest and broader geopolitcal events influence the development of the space industry. It is important to identify such patterns to ensure that short-term events and political cycles do not inhabit the ability of our species to explore the unknown.
 
+
 ## Skill Development & Enrichment
 
 Throughout this project,  I am focusing on developing essential skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, will serve as a solid foundation as I embark on this project. Although I am not directly applying these skills here, I believe my background will enable me to achieve my goals more efficiently.
@@ -34,6 +36,7 @@ Throughout this project,  I am focusing on developing essential skills in data a
 For the ETL process, I chose to utilize Excel and Power Query due to their user-friendly interface and my familiarity with these tools. This will facilitate effective data cleaning and transformation. I plan to conduct the EDA using SQL, specifically with SQLite, enabling me to build datasets from scratch, perform complex joins, and recover additional details effectively.
 
 I am particularly eager to enhance my visualisation skills using Power BI. While I have previously used Excel and ggplot2 in RStudio, I believe that Power BI's capabilities will allow me to create more sophisticated and interactive visualizations. I anticipate that my existing knowledge will make the transition to Power BI more intuitive.
+
 
 ## Data Dictionary
 
@@ -112,6 +115,7 @@ For the second point, I created a further CTE for the Unknown sector, but filter
 
 I am now very happy with the output and format of output for my breakdown of missions per year per sector.
 
+
 # Bonus EDA and Data Commentary
 
 I thought it might also be interesting to understand the distribution of launches globally and further, how this has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicer/sliders to show time trends on a map. For places like Kazakhstan, I could map mission data in its own graph to show if the break-up of the USSR impacted launch frequency for example.
@@ -169,6 +173,7 @@ As my final piece of exploratory data analysis, I want to identify which agency 
 
 This was an incredibly insightful result, despite the slightly complex query. Notice the dominance of the Soviet agency (RSVN USSR) between 1963-1991, with the end of this dominance coincidicing directly with the dissolution of the Soviet Union that same year. Also note the 2000s when the highest launching agency reached double digits just twice, reflecting my hypothesis that the slow retirement of the space shuttle and wider economic factors contributed to a downturn in spaceflight investment, political ambition and concerns over safety.
 
+
 ## Data Visualisations in Power BI
 
 The next and final practical stage of this project is visualisation the data that I have created, cleaned, modelled and briefly reviewing. This will be carried out within Power BI Desktop where I used a ODBC driver to import data from space_missions database on SQLite. Rather than including links to the visuals themselves, I will instead include screenshots of the graphic and then include a brief explanation - this is due to the license I have for Power BI, but also as it better reflects previous work in this project.
@@ -196,6 +201,7 @@ As outlined in my project brief and reflecting the work done within SQL, were a 
     - to see if the above has changed over time and in relation to any changes in composition of pulic and private sector
 
 ### Count of Missions by Launch Geography
+
 ![image](https://github.com/user-attachments/assets/9088187b-35cd-4948-be86-78c612a8aed5)
 
 This visualization highlights that the United States and Russia have dominated space launches, with Kazakhstan following due to its historical role as a USSR launch site. China and French Guiana also feature significantly, showcasing the contributions of both national and international (such as ESA) space programs.
@@ -268,3 +274,6 @@ Another error I encountered was of my own doing. This error relates to how I sav
 
 ### Naming Conventions
 Less important but still an area to improve is the constant use of best practice naming conventions. There are capitalised fields and fields not separated with _ that appear in the data which I would like to improve in later projects.
+
+### Database Structure
+
