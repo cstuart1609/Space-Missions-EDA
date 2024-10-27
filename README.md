@@ -224,6 +224,10 @@ As an alternate visualisation of launch count by country, I created a custom 'su
 
 ![image](https://github.com/user-attachments/assets/9a29656c-4d89-4b0e-91f4-f3d4b8d0980e)
 
+As a further interrogation of the sector breakdown, this chart shows how the 62 launching agencies are composed. For readability, I combined countries with just one launching agency as 'Other', amounting to 9 entries.
+
+
+
 
 ## Project criticisms
 
