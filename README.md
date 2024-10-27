@@ -181,8 +181,10 @@ I had a choice of solutions to create a unique index/ID field, each with various
 I then ensured that this changed had worked, by ensuring Power BI recognised a one-to-one relationship between mission_id.space_missions and mission_id.space_locations.
 
 As outlined in my project brief and reflecting the work done within SQL, were a number of key visuaulisations I needed to create:
-* Trend of overall spaceflights over-time as well as a breakdown of flights by sector - in order to draw conclusions on growth of private sector and impact of real-world conditions on public/Government-funded spaceflight.
-* Insight into composition of overall flights by Sector, as well as insight into the Country of origin for the agency faciliating the launch - also shows which sectors have contributed to the most flights and also which countries are chief proponents of private spaceflight.
+* Trend of overall spaceflights over-time as well as a breakdown of flights by sector
+    - in order to draw conclusions on growth of private sector and impact of real-world conditions on public/Government-funded spaceflight.
+* Insight into composition of overall flights by Sector, as well as insight into the Country of origin for the agency faciliating the launch
+    - also shows which sectors have contributed to the most flights and also which countries are chief proponents of private spaceflight.
 * Mapping of flight data and mission counts by launch geography and also agency country of origin
 * Bonus is to see if I can show how flights by location have changed over time
 
