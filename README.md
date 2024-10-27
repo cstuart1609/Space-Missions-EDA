@@ -226,7 +226,7 @@ As an alternate visualisation of launch count by country, I created a custom 'su
 
 As a further interrogation of the sector breakdown, this chart shows how the 62 launching agencies are composed. For readability, I combined countries with just one launching agency as 'Other', amounting to 9 entries. This visual generally backs up my above statement - however, China has 3 private agencies compared to 2 government agencies. Possibly unsurprisingly, Joint agencies are typically private sector in nature.
 
-###
+### Further Analysis of Geodata
 
 ![image](https://github.com/user-attachments/assets/e826f363-555f-4937-820b-817882750f3b)
 
@@ -243,6 +243,13 @@ This range shows the first ten years of the space race, with the US once again l
 #### Launches prior to the dissolution of the Soviet Union
 ![image](https://github.com/user-attachments/assets/6b18a9e3-83d2-4c69-a218-48bea1cc16d0)
 This shows the relative dominance of the USSR prior to its dissolution in 1991. At the time, the space race was truly a two-horse race - since, the field has opened up significantly.
+
+#### Public Sector Launches between 1957-2022
+![image](https://github.com/user-attachments/assets/74b01292-ddad-411a-836d-534a6575f165)
+
+#### Private Sector Launches between 1957-2022
+![image](https://github.com/user-attachments/assets/83c6575e-8d25-42a8-a58f-e8c97e918c68)
+
 
 ## Project criticisms
 
