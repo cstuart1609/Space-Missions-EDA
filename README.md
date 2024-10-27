@@ -186,7 +186,10 @@ As outlined in my project brief and reflecting the work done within SQL, were a 
 * Insight into composition of overall flights by Sector, as well as insight into the Country of origin for the agency faciliating the launch
     - also shows which sectors have contributed to the most flights and also which countries are chief proponents of private spaceflight.
 * Mapping of flight data and mission counts by launch geography and also agency country of origin
+    - to create a powerful and clear picture of which countries have contributed the most to space launch numbers
 * Bonus is to see if I can show how flights by location have changed over time
+    - to see if the above has changed over time and in relation to any changes in composition of pulic and private sector
+ 
 
 ## Project criticisms
 
