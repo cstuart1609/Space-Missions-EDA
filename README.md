@@ -226,7 +226,14 @@ As an alternate visualisation of launch count by country, I created a custom 'su
 
 As a further interrogation of the sector breakdown, this chart shows how the 62 launching agencies are composed. For readability, I combined countries with just one launching agency as 'Other', amounting to 9 entries. This visual generally backs up my above statement - however, China has 3 private agencies compared to 2 government agencies. Possibly unsurprisingly, Joint agencies are typically private sector in nature.
 
+###
 
+![image](https://github.com/user-attachments/assets/e826f363-555f-4937-820b-817882750f3b)
+
+This visual is similar to the bubble chart from before - but now uses a heatmap element to show magnitude of launches. It also includes a time slicer which can show the data within a range. Below I will manipulate this to show how launch patterns have changed over the date range. Unfortunately, unlike the bubble map, the filled map variant is unable to show offshore launches.
+
+#### Launches since 2000
+![image](https://github.com/user-attachments/assets/20eea66e-3d79-4d13-86e8-27142a61925a)
 
 
 ## Project criticisms
