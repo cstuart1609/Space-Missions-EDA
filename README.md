@@ -69,7 +69,7 @@ The database behind this project consists of 3 tables - space_missions, space_ag
 'Mission' is the primary key in both missions and locations linking the tables in a one-to-one relationship. Meanwhile, the agencies table primary key is company with a one-to-many relationship with both the missions and location table. This dataset has a relatively simple structure with the agencies table acting as a look-up table, with both missions and locations as indexed tables - albeit a different variants of the same data.
 
 
-## Data ETL in Power Query - Extract, Transform, Load
+## Data ETL in Power Query
 
 The ETL process is conducted within Excel, a choice made due to the dataset's relatively small size, which allows for effective management without overwhelming computational demands. After importing the CSV file into Power Query, I meticulously examined the dataset for errors. A notable issue identified was the datetime field erroneously displaying all years as 30/12/1899. This anomaly was resolved, removing the date aspect, as it bore no significance for the subsequent analysis.
 
