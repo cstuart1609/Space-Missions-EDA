@@ -9,8 +9,8 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 1. [Project Aims](#project-aims)
 2. [Skill Development & Enrichment](#skills-development-&-enrichment)
 3. [Data Dictionary](#data-dictionary)
-4. Entity Relationship Diagram
-5. Data ETL in Power Query - Extract, Transform, Load
+4. [Entity Relationship Diagram](#entity-relationship-diagram)
+5. [Data ETL in Power Query - Extract, Transform, Load](#data-etl-in-power-query)
 6. Exploratory Data Analysis and Database Creation with SQL
 7. Bonus EDA and Data Commentary
 8. Data Visualisations in Power BI
@@ -27,7 +27,7 @@ I aim to explore global trends in private spaceflight, as well as the industry i
 
 I am also curious to see how investment, public interest and broader geopolitcal events influence the development of the space industry. It is important to identify such patterns to ensure that short-term events and political cycles do not inhabit the ability of our species to explore the unknown.
 
-## Skill Development and Enrichment
+## Skill Development & Enrichment
 
 Throughout this project,  I am focusing on developing essential skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, will serve as a solid foundation as I embark on this project. Although I am not directly applying these skills here, I believe my background will enable me to achieve my goals more efficiently.
 
@@ -69,7 +69,7 @@ The database behind this project consists of 3 tables - space_missions, space_ag
 'Mission' is the primary key in both missions and locations linking the tables in a one-to-one relationship. Meanwhile, the agencies table primary key is company with a one-to-many relationship with both the missions and location table. This dataset has a relatively simple structure with the agencies table acting as a look-up table, with both missions and locations as indexed tables - albeit a different variants of the same data.
 
 
-## Data ETL - Extract, Transform, Load
+## Data ETL in Power Query - Extract, Transform, Load
 
 The ETL process is conducted within Excel, a choice made due to the dataset's relatively small size, which allows for effective management without overwhelming computational demands. After importing the CSV file into Power Query, I meticulously examined the dataset for errors. A notable issue identified was the datetime field erroneously displaying all years as 30/12/1899. This anomaly was resolved, removing the date aspect, as it bore no significance for the subsequent analysis.
 
