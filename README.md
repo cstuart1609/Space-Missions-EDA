@@ -287,3 +287,5 @@ During the data modelling phase of this project, I encountered a significant cha
 This assumption resulted in duplicate entries in the space_missions and space_locations tables, undermining data integrity. I first tried to create a composite identifier using mission_name and year, but this proved unfeasible due to identical names within the same year. Ultimately, I opted to introduce a unique mission_id field to ensure distinct identification. Implementing this change required revisiting the original dataset before re-importing it to Power BI, as the software could not generate stable unique IDs across multiple tables without a reference. Although this meant starting again, it was essential for maintaining database integrity and enabling accurate relationships in my visualisations.
 
 This challenge highlighted the importance of planning for potential issues with unique identifiers when structuring a database. By addressing this issue, I was able to produce more accurate insights, ultimately strengthening the quality of my analysis.
+
+## Conclusions and Review of Outcomes
