@@ -12,8 +12,8 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 4. [Entity Relationship Diagram](#entity-relationship-diagram)
 5. [Data ETL in Power Query](#data-etl-in-power-query)
 6. [Exploratory Data Analysis and Database Creation with SQL](#exploratory-data-analysis-and-database-creation-with-sql)
-7. Bonus EDA and Data Commentary
-8. Data Visualisations in Power BI
+7. [Bonus EDA and Data Commentary](#bonus-eda-and-data-commentary)
+8. [Data Visualisations in Power BI](#data-visualisations-in-power-bi)
 9. Project Criticisms
 10. Conclusions and Review of Outcomes
 
@@ -112,7 +112,7 @@ For the second point, I created a further CTE for the Unknown sector, but filter
 
 I am now very happy with the output and format of output for my breakdown of missions per year per sector.
 
-# Bonus EDA
+# Bonus EDA and Data Commentary
 
 I thought it might also be interesting to understand the distribution of launches globally and further, how this has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicer/sliders to show time trends on a map. For places like Kazakhstan, I could map mission data in its own graph to show if the break-up of the USSR impacted launch frequency for example.
 
@@ -169,7 +169,7 @@ As my finalpiece of exploratory data analysis, I want to identify which agency l
 
 This was an incredibly insightful result, despite the slightly complex query. Notice the dominance of the Soviet agency (RSVN USSR) between 1963-1991, with the end of this dominance coincidicing directly with the dissolution of the Soviet Union that same year. Also note the 2000s when the highest launching agency reached double digits just twice, reflecting my hypothesis that the slow retirement of the space shuttle and wider economic factors contributed to a downturn in spaceflight investment, political ambition and concerns over safety.
 
-## Data Visualisations
+## Data Visualisations in Power BI
 
 The next and final practical stage of this project is visualisation the data that I have created, cleaned, modelled and briefly reviewing. This will be carried out within Power BI Desktop where I used a ODBC driver to import data from space_missions database on SQLite. Rather than including links to the visuals themselves, I will instead include screenshots of the graphic and then include a brief explanation - this is due to the license I have for Power BI, but also as it better reflects previous work in this project.
 
