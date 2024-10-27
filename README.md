@@ -14,8 +14,8 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 6. [Exploratory Data Analysis and Database Creation with SQL](#exploratory-data-analysis-and-database-creation-with-sql)
 7. [Bonus EDA and Data Commentary](#bonus-eda-and-data-commentary)
 8. [Data Visualisations in Power BI](#data-visualisations-in-power-bi)
-9. Project Criticisms
-10. Conclusions and Review of Outcomes
+9. [Project Criticisms](#project-criticisms)
+10. [Conclusions and Review of Outcomes](#conclusions-and-review-of-outcomes)
 
 
 ## Project Aims
