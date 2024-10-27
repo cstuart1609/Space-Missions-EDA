@@ -246,9 +246,11 @@ This shows the relative dominance of the USSR prior to its dissolution in 1991. 
 
 #### Public Sector Launches between 1957-2022
 ![image](https://github.com/user-attachments/assets/74b01292-ddad-411a-836d-534a6575f165)
+This shows a pretty even spread behind a dominant Russia and USSR. Interestingly, China and the USA have very similar flight numbers by the public sector, demonstrating the impressive growth of the Chinese presence in the space race.
 
 #### Private Sector Launches between 1957-2022
 ![image](https://github.com/user-attachments/assets/83c6575e-8d25-42a8-a58f-e8c97e918c68)
+This shows the absolute dominance of the USA in private spaceflight with French Guiana and Japan with a strong showing. 
 
 
 ## Project criticisms
