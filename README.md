@@ -11,7 +11,7 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 3. [Data Dictionary](#data-dictionary)
 4. [Entity Relationship Diagram](#entity-relationship-diagram)
 5. [Data ETL in Power Query](#data-etl-in-power-query)
-6. Exploratory Data Analysis and Database Creation with SQL
+6. [Exploratory Data Analysis and Database Creation with SQL](#exploratory-data-analysis=and-database-creation-with-sql)
 7. Bonus EDA and Data Commentary
 8. Data Visualisations in Power BI
 9. Project Criticisms
@@ -86,7 +86,7 @@ Before moving onto the next stage of this project, I wanted to create a second d
     For exclusively this part of the project, I utilised generative AI to streamline a specific part of the data preparation process—creating a table of existing company names and classifying them as public or private sector. By automating this step, I was able to focus more on the deeper analysis and insights, ensuring a more efficient workflow. AI tools were used responsibly and did not influence the core data analysis, but instead acted as a means to enhance productivity and accuracy during the initial data collection phase. To ensure the resultant table returned the exact index of companies as the initial data set, I used an EXACT function which confirmed consistency across the two datasets. I saved this table as space_agencies.csv.
 
 
-## Exploratory Data Analysis with SQL
+## Exploratory Data Analysis and Database Creation with SQL
 
 To get a better understanding of my data, as well as an insight into the scale of launches per year, I performed a quick query to find average missions a year.
 
