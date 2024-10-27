@@ -205,6 +205,15 @@ This visualisation clearly shows that the USA and Russia lead the way with a sim
 
 This dashboard shows the results of the previous visualisation, mapped geographically - for regions like the Yellow Sea, there are smaller spotlight graphics to show further detail. It is interesting to note that no single launch has taken place in continental Europe, in contrast with the number of European countries that have facilitated flights. With the exception of a few launches in the Barents Sea and Oceania, many historic flights have taken place close to the Equator - scientifically there are a number of reasons why this is the case but it is interesting so the importance of latitude in this manner.
 
+### Trend of public and private sector space flights launched between 1957-2022
+![image](https://github.com/user-attachments/assets/11ebdc6e-0879-4625-bc08-091379b4a484)
+
+This graph shows how the number of yearly space flight has changed over history. Some interesting elements include the steady but slow growth of private space flight until a significant pick-up in the 2010s. There is a significant drop-off of public space flight after it's peak in the 1970s, the steepest decrease occured around the time that NASA shifted focus away from Apollo missions and budget towards the shuttle and ISS projects. Interestingly 1995 marked the first year that private space missions outnumnbered public ones, notable as the 'final nail' for public spaceflight was the collapse of the Soviet Union in 1991.
+
+![image](https://github.com/user-attachments/assets/3c034036-8491-4ee9-8088-42619b0d3fd6)
+
+Further to the previous visualisation, this graph shows how the composition spaceflight has seen a significant switch towards private sector since the 1990s. while overall flight numbers have recovered from a rapid decrease in the 1980s to their highest ever levels from the 2010s, a combination of both private sector growth but also the emergence of new players such as China and India. Note: Although 2022 shows a decrease, it is worth noting that this is because this dataset cut-off at some point during this period, as opposed to a side-effect of COVID-19 and lockdowns.
+
 ## Project criticisms
 
 ### Data Accuracy
