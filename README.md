@@ -198,33 +198,33 @@ As outlined in my project brief and reflecting the work done within SQL, were a 
 ### Count of Missions by Launch Geography
 ![image](https://github.com/user-attachments/assets/9088187b-35cd-4948-be86-78c612a8aed5)
 
-This visualisation clearly shows that the USA and Russia lead the way with a similar launch count - Kazahkstan leads the rest with China and French Guiana just behind - supporting my query result earlier.
+This visualization highlights that the United States and Russia have dominated space launches, with Kazakhstan following due to its historical role as a USSR launch site. China and French Guiana also feature significantly, showcasing the contributions of both national and international (such as ESA) space programs.
 
 ### Geographical Mapping of Launch Density by Geo
 
 ![image](https://github.com/user-attachments/assets/a6462438-c446-450a-b7c7-c594bc0a59e5)
 
-This dashboard shows the results of the previous visualisation, mapped geographically - for regions like the Yellow Sea, there are smaller spotlight graphics to show further detail. It is interesting to note that no single launch has taken place in continental Europe, in contrast with the number of European countries that have facilitated flights. With the exception of a few launches in the Barents Sea and Oceania, many historic flights have taken place close to the Equator - scientifically there are a number of reasons why this is the case but it is interesting so the importance of latitude in this manner.
+This dashboard shows the results of the previous visualisation, mapped geographically - for regions like the Yellow Sea, there are smaller spotlight graphics to show further detail. It is interesting to note that no single launch has taken place in continental Europe, in contrast with the number of European countries that have facilitated flights. With the exception of a few launches in the Barents Sea and Oceania, many historic flights have taken place close to the Equator - This spatial concentration near the equator relates to orbital mechanics, where lower latitudes offer energy efficiencies for launch vehicles.
 
 ### Trend of public and private sector space flights launched between 1957-2022
 
 ![image](https://github.com/user-attachments/assets/11ebdc6e-0879-4625-bc08-091379b4a484)
 
-This graph shows how the number of yearly space flight has changed over history. Some interesting elements include the steady but slow growth of private space flight until a significant pick-up in the 2010s. There is a significant drop-off of public space flight after it's peak in the 1970s, the steepest decrease occured around the time that NASA shifted focus away from Apollo missions and budget towards the shuttle and ISS projects. Interestingly 1995 marked the first year that private space missions outnumnbered public ones, notable as the 'final nail' for public spaceflight was the collapse of the Soviet Union in 1991.
+This graph shows how the number of yearly space flight has changed over history. Some interesting elements include the steady but slow growth of private space flight until a significant pick-up in the 2010s. There is a significant drop-off of public space flight after it's peak in the 1970s, the steepest decrease occured around the time that NASA shifted focus away from Apollo missions and budget towards the shuttle and ISS projects. Private sector missions began to outnumber public missions from the 1990s onward, particularly after the dissolution of the Soviet Union in 1991. The 2010s marked rapid growth in private sector launches, emphasizing the expanding role of commercial ventures.
 
 ![image](https://github.com/user-attachments/assets/3c034036-8491-4ee9-8088-42619b0d3fd6)
 
 Further to the previous visualisation, this graph shows how the composition spaceflight has seen a significant switch towards private sector since the 1990s. while overall flight numbers have recovered from a rapid decrease in the 1980s to their highest ever levels from the 2010s, a combination of both private sector growth but also the emergence of new players such as China and India. Note: Although 2022 shows a decrease, it is worth noting that this is because this dataset cut-off at some point during this period, as opposed to a side-effect of COVID-19 and lockdowns.
 
-### Launching Agency Composition
+### Launching Agencies by Sector
 
 ![image](https://github.com/user-attachments/assets/a98aaf4b-8a22-447f-8107-47e14b9ab0fa)
 
-As an alternate visualisation of launch count by country, I created a custom 'sun-burst' chart that further segmented the data by sector as well. It is interesting to note that the majority of US launches are private, whereas Russian/Soviet and Chinese launches are government-backed - reflective of the involvement of the state in their respective economies.
+A sunburst chart provides a detailed breakdown of launches by country and sector. The United States shows a significant private-sector contribution, while launches from Russia, the Soviet Union, and China are predominantly state-funded. This difference reflects broader economic systems, with greater private industry involvement in the U.S.
 
 ![image](https://github.com/user-attachments/assets/9a29656c-4d89-4b0e-91f4-f3d4b8d0980e)
 
-As a further interrogation of the sector breakdown, this chart shows how the 62 launching agencies are composed. For readability, I combined countries with just one launching agency as 'Other', amounting to 9 entries. This visual generally backs up my above statement - however, China has 3 private agencies compared to 2 government agencies. Possibly unsurprisingly, Joint agencies are typically private sector in nature.
+A deeper look at launching agencies reveals that most are government-backed. To aid readability, countries with a single agency are grouped as "Other." Notably, China has multiple private agencies, indicating an emerging private sector, albeit smaller than the government segment. Private joint agencies outnumber government-backed joint agencies, underscoring the collaborative, often commercial nature of joint ventures.
 
 ### Further Analysis of Geodata
 
