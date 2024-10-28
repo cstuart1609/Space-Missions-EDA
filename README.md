@@ -291,10 +291,16 @@ This challenge highlighted the importance of planning for potential issues with 
 ## Conclusions and Review of Outcomes
 
 ### Early reflections
-The project aimed to identify and analyse any trends within the entire history of spaceflight, focussing on geography, agency-type and temporal factors. I wanted to see if there had been growth of the spaceflight industry since the space race or whether the fervour of the Cold War created an influx in interest in space that would not be repeated. My intial thoughts were that, although governments were no longer able or willing to dedicate the same budget to spaceflight, the combination of evolution of private spaceflight and emerging players like China would support the growth of the industry as a whole.
+The project aimed to identify and analyse any trends within the spaceflight industry since it's inception in 1957, focussing on geography, agency-type and temporal factors. I wanted to see if there had been growth of the spaceflight industry since the space race or whether the fervour of the Cold War created an influx in interest in space that would not be repeated. My intial thoughts were that, although governments were no longer able or willing to dedicate the same budget to spaceflight, the combination of evolution of private spaceflight and emerging players like China would support the growth of the industry as a whole. As an additional objective, I wanted to explore how the geographic spread of spaceflight changed over the years, I suspected dominance from the USA and Russia (/USSR) but also a rapid increase of new sites since the growth of private flights.
 
-* Growth and Shift in Sector Participation
-* Geographic Distribution and Strategic Launch Sites
+Having extensively modelled and enriched the dataset, I was able to create a number of powerful that has allowed me to address and scrutinise these intial hypotheses. The key findings I observed broadly sat within the following trends. 
+
+* __Growth and Shift in Sector Participation:__ A clear trend emerged showing the transition from government-dominated space missions in the early days of the space race to a rapidly growing private sector since the 2010s. Waning budgets and the collapse of spaceflight behomoth, the USSR very much popped the public sector baloon for the original proponents, while recent and rapid progress of the Indian and Chinese governments might offer to reverse this trend in coming years. In the West, private entities now drive much of the innovation and activity in the space industry, with the U.S. as the main hub of private-sector launches.
+
+* __Geographic Distribution and Strategic Launch Sites:__ Visualisations of launch data highlighted the strategic advantages of equatorial launch sites, which offer more favourable launch conditions due to their geographic location. This advantage often led to the use of sites in historic colonial territories, particularly during the 1960s and 70s, with European states like Italy launching from Kenya, and France from Algeria and French Guiana. Similarly, the USSR established a key site in Kazakhstan. Notably, both French Guiana and Kazakhstan remain active, strategically important launch sites to this day.
+
+It was surprising to note within the data, that not a single orbital space launch has ever occured in continental Europe
+
 * Impact of Historical Events on Space Activity
 * Global Contribution and Emerging Players
 * 
