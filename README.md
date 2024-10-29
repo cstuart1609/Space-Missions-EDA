@@ -1,9 +1,11 @@
 # Exploratory Data Analysis on Real Time Space Missions Dataset 
 
 
+
 ## Project Brief
 
 The Space Missions dataset encompasses a comprehensive record of global rocket launches spanning from 1957 to 2022. This dataset serves as a rich resource for analysing the evolution of space missions over time, providing insights into various factors influencing launch trends. My project aims to conduct an Exploratory Data Analysis (EDA) on this dataset, employing a systematic approach to data processing and visualisation.
+
 
 
 ## Table of Contents
@@ -30,6 +32,7 @@ I aim to explore global trends in private spaceflight, as well as the industry i
 I am also curious to see how investment, public interest and broader geopolitcal events influence the development of the space industry. It is important to identify such patterns to ensure that short-term events and political cycles do not inhabit the ability of our species to explore the unknown.
 
 
+
 ## Skill Development & Enrichment
 
 Throughout this project, I am focused on advancing my skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, provides a solid foundation. Although I am not directly applying these skills here, I anticipate that my background will enhance the efficiency and depth of my analysis.
@@ -37,6 +40,7 @@ Throughout this project, I am focused on advancing my skills in data analytics a
 For ETL, I chose Excel and Power Query for their user-friendly interfaces and my familiarity with them, which will streamline the data cleaning and transformation process. I plan to conduct the EDA using SQL (specifically SQLite), allowing me to build datasets from scratch, perform complex joins, and extract additional details effectively.
 
 Lastly, I am particularly interested in enhancing my visualisation skills using Power BI. Having previously used Excel and ggplot2 in RStudio, I believe Power BI’s capabilities will allow for the creation of more interactive and sophisticated visuals, making the transition intuitive and aligning well with my project goals.
+
 
 
 ## Data Dictionary
@@ -64,6 +68,7 @@ Find an explanation of each column within the tables of the dataset (where colum
     - _initial_country_: Similar to the launch_geo field, this field is an intermediate field which captures the highest order in the location field. As explored later in my analysis, this was not suitable for directly contributing launches to geographical regions
  
 
+
 ## Entity Relationship Diagram
 
 ![ERD](https://github.com/user-attachments/assets/6caa00a5-9412-441f-b480-40817ef55f39)
@@ -71,6 +76,7 @@ Find an explanation of each column within the tables of the dataset (where colum
 The database behind this project consists of 3 tables - space_missions, space_agencies, space_locations - the first table being the original dataset downloaded from Kaggle. The latter two tables were of my own design with the second presenting deeper analysis into each agency and the location table presenting a format that aids the geoegraphical analysis I will perform. 
 
 'Mission' is the primary key in both missions and locations linking the tables in a one-to-one relationship. Meanwhile, the agencies table primary key is company with a one-to-many relationship with both the missions and location table. This dataset has a relatively simple structure with the agencies table acting as a look-up table, with both missions and locations as indexed tables - albeit a different variants of the same data.
+
 
 
 ## Data ETL in Power Query
@@ -115,6 +121,7 @@ For the second point, I created a further CTE for the Unknown sector, but filter
 ![Query3](https://github.com/user-attachments/assets/99b0c30b-507e-481a-a15d-85c8a7a3d7a9)
 
 I am now very happy with the output and format of output for my breakdown of missions per year per sector.
+
 
 
 # Bonus EDA and Data Commentary
@@ -173,6 +180,7 @@ As my final piece of exploratory data analysis, I want to identify which agency 
 ![Query5](https://github.com/user-attachments/assets/a5bf0c0f-a081-4463-8a59-0e64879c36d7)
 
 This was an incredibly insightful result, despite the slightly complex query. Notice the dominance of the Soviet agency (RSVN USSR) between 1963-1991, with the end of this dominance coincidicing directly with the dissolution of the Soviet Union that same year. Also note the 2000s when the highest launching agency reached double digits just twice, reflecting my hypothesis that the slow retirement of the space shuttle and wider economic factors contributed to a downturn in spaceflight investment, political ambition and concerns over safety.
+
 
 
 ## Data Visualisations in Power BI
@@ -260,11 +268,13 @@ This shows a pretty even spread behind a dominant Russia and USSR. Interestingly
 This shows the absolute dominance of the USA in private spaceflight with French Guiana and Japan with a strong showing. 
 
 
+
 ## Project criticisms
 
 As I will discuss, I am generally happy with the outcome of my analysis in terms of validating my initial hypothesis, however, there were a few aspects of the project that created difficulties throughout. Although they slowed the completion of the project, I feel that they also presented opportunities to develop my skillset and apply critical-thinking to overcome them.
 
 As a broader ambition, I would like to enhance my Python skillset and knowledge of Kaggle and Github to perform queries in the platform. As an alternative, I may explore uploading my next project to my own website that I would create - I feel this might allow me to include interactive slicers and animated visuals.
+
 
 ### Data Accuracy
 Data accuracy in the AI-generated tables presented significant challenges throughout the project. Several notable errors highlighted these issues, such as the listing of the ABMA (Army Ballistic Missile Agency) as AMBA. This misidentification made it impossible to ascertain its correct sector, leading to potential inaccuracies in my analysis. Additionally, the RAE (Royal Aerospace Establishment) was incorrectly attributed to Brazil instead of its true origin, Great Britain. Such discrepancies not only undermine the reliability of the dataset but also complicate the analysis process by obscuring critical context about the agencies involved.
@@ -281,6 +291,7 @@ Another error I encountered was of my own doing. This error relates to how I sav
 
 ![image](https://github.com/user-attachments/assets/d51b941b-186b-482d-a1e9-5e6e50d4ddf7)
 
+
 ### Naming Conventions
 While less critical than issues related to data accuracy, adhering to best practice naming conventions is still an important area for improvement in future projects. In the current dataset, I noticed inconsistencies, such as fields that are capitalised and others that do not utilise underscores (_) for separation. These variations can lead to confusion and make the data less intuitive to navigate.
 
@@ -292,6 +303,8 @@ During the data modelling phase of this project, I encountered a significant cha
 This assumption resulted in duplicate entries in the space_missions and space_locations tables, undermining data integrity. I first tried to create a composite identifier using mission_name and year, but this proved unfeasible due to identical names within the same year. Ultimately, I opted to introduce a unique mission_id field to ensure distinct identification. Implementing this change required revisiting the original dataset before re-importing it to Power BI, as the software could not generate stable unique IDs across multiple tables without a reference. Although this meant starting again, it was essential for maintaining database integrity and enabling accurate relationships in my visualisations.
 
 This challenge highlighted the importance of planning for potential issues with unique identifiers when structuring a database. By addressing this issue, I was able to produce more accurate insights, ultimately strengthening the quality of my analysis.
+
+
 
 ## Conclusions and Review of Outcomes
 
