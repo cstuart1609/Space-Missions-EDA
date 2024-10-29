@@ -225,11 +225,11 @@ This dashboard shows the results of the previous visualisation, mapped geographi
 
 ![image](https://github.com/user-attachments/assets/11ebdc6e-0879-4625-bc08-091379b4a484)
 
-This graph shows how the number of yearly space flight has changed over history. Some interesting elements include the steady but slow growth of private space flight until a significant pick-up in the 2010s. There is a significant drop-off of public space flight after it's peak in the 1970s, the steepest decrease occured around the time that NASA shifted focus away from Apollo missions and budget towards the shuttle and ISS projects. Private sector missions began to outnumber public missions from the 1990s onward, particularly after the dissolution of the Soviet Union in 1991. The 2010s marked rapid growth in private sector launches, emphasizing the expanding role of commercial ventures.
+This graph shows how year space launches have varied since 1957 up until 2022. Some interesting elements include the steady but cautious growth of private space flight until a considerable boom in the 2010s. There is a significant drop-off of public space flight after it's peak in the 1970s, the steepest decrease occured around the time that NASA shifted focus away from Apollo missions and budget towards the shuttle and ISS projects. Private sector missions began to outnumber public missions from the 1990s onward, particularly after the dissolution of the Soviet Union in 1991. The 2010s marked rapid growth in private sector launches, emphasizing the expanding role of commercial ventures.
 
 ![image](https://github.com/user-attachments/assets/3c034036-8491-4ee9-8088-42619b0d3fd6)
 
-Further to the previous visualisation, this graph shows how the composition spaceflight has seen a significant switch towards private sector since the 1990s. while overall flight numbers have recovered from a rapid decrease in the 1980s to their highest ever levels from the 2010s, a combination of both private sector growth but also the emergence of new players such as China and India. Note: Although 2022 shows a decrease, it is worth noting that this is because this dataset cut-off at some point during this period, as opposed to a side-effect of COVID-19 and lockdowns.
+Further to the previous visualisation, this graph shows how the composition of spaceflight has seen a shift towards private sector since the 1990s. Overall launches have recovered from a rapid decrease in the 1980s to their highest ever levels from the 2010s, due to a combination of both private sector growth but also the emergence of new players such as China and India. Note: Although 2022 shows a decrease, it is worth noting that this is because this dataset cut-off at some point during this period, as opposed to a side-effect of COVID-19 and lockdowns.
 
 ### Launching Agencies by Sector
 
@@ -253,7 +253,7 @@ This shows a significant drop-off in Russian launches, while China and French Gu
 
 #### Launches from 1957-1967 
 ![image](https://github.com/user-attachments/assets/7c61a760-f3ff-4422-add4-23149af466b1)
-This range shows the first ten years of the space race, with the US once again leading the way but with significant launches in Russia and Kazakhstan (both part of the USSR at the time). 
+This range shows the first ten years of the space race, with the US once again leading the way, rivalled by a significant number of launches in Russia and Kazakhstan (both part of the USSR at the time). 
 
 #### Launches prior to the dissolution of the Soviet Union
 ![image](https://github.com/user-attachments/assets/6b18a9e3-83d2-4c69-a218-48bea1cc16d0)
@@ -308,7 +308,6 @@ This challenge highlighted the importance of planning for potential issues with 
 ----
 ## Conclusions and Review of Outcomes
 
-### Early reflections
 The project aimed to identify and analyse any trends within the spaceflight industry since it's inception in 1957, focussing on geography, agency-type and temporal factors. I wanted to see if there had been growth of the spaceflight industry since the space race or whether the fervour of the Cold War created an influx in interest in space that would not be repeated. My intial thoughts were that, although governments were no longer able or willing to dedicate the same budget to spaceflight, the combination of evolution of private spaceflight and emerging players like China would support the growth of the industry as a whole. As an additional objective, I wanted to explore how the geographic spread of spaceflight changed over the years, I suspected dominance from the USA and Russia (/USSR) but also a rapid increase of new sites since the growth of private flights.
 
 Having extensively modelled and enriched the dataset, I was able to create a number of powerful that has allowed me to address and scrutinise these intial hypotheses. The key findings I observed broadly sat within the following trends. 
