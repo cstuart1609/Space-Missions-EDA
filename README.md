@@ -5,6 +5,7 @@
 
 The Space Missions dataset encompasses a comprehensive record of global rocket launches spanning from 1957 to 2022. This dataset serves as a rich resource for analysing the evolution of space missions over time, providing insights into various factors influencing launch trends. My project aims to conduct an Exploratory Data Analysis (EDA) on this dataset, employing a systematic approach to data processing and visualisation.
 
+
 ## Table of Contents
 1. [Project Aims](#project-aims)
 2. [Skill Development & Enrichment](#skills-development-&-enrichment)
@@ -31,11 +32,11 @@ I am also curious to see how investment, public interest and broader geopolitcal
 
 ## Skill Development & Enrichment
 
-Throughout this project,  I am focusing on developing essential skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, will serve as a solid foundation as I embark on this project. Although I am not directly applying these skills here, I believe my background will enable me to achieve my goals more efficiently.
+Throughout this project, I am focused on advancing my skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, provides a solid foundation. Although I am not directly applying these skills here, I anticipate that my background will enhance the efficiency and depth of my analysis.
 
-For the ETL process, I chose to utilize Excel and Power Query due to their user-friendly interface and my familiarity with these tools. This will facilitate effective data cleaning and transformation. I plan to conduct the EDA using SQL, specifically with SQLite, enabling me to build datasets from scratch, perform complex joins, and recover additional details effectively.
+For ETL, I chose Excel and Power Query for their user-friendly interfaces and my familiarity with them, which will streamline the data cleaning and transformation process. I plan to conduct the EDA using SQL (specifically SQLite), allowing me to build datasets from scratch, perform complex joins, and extract additional details effectively.
 
-I am particularly eager to enhance my visualisation skills using Power BI. While I have previously used Excel and ggplot2 in RStudio, I believe that Power BI's capabilities will allow me to create more sophisticated and interactive visualizations. I anticipate that my existing knowledge will make the transition to Power BI more intuitive.
+Lastly, I am particularly interested in enhancing my visualisation skills using Power BI. Having previously used Excel and ggplot2 in RStudio, I believe Power BI’s capabilities will allow for the creation of more interactive and sophisticated visuals, making the transition intuitive and aligning well with my project goals.
 
 
 ## Data Dictionary
@@ -80,13 +81,13 @@ I imported the CSV directly into Power Query and scanned the data very quicky to
 
 ![image](https://github.com/user-attachments/assets/01295f51-1176-45b0-8682-b1303dae8082)
 
-I am now happy with the data and suitably happy that it is ready to queried consistently and logically. I saved this table as space_missions.csv.
+I am now happy with the data is formatted and feel that it is ready to queried consistently and logically. I saved this table as space_missions.csv.
 
 ![image](https://github.com/user-attachments/assets/3b9e617c-ae39-4d62-8608-8f0000ffdd45)
 
 Before moving onto the next stage of this project, I wanted to create a second dataset so that I could have a database with multiple tables in order to perform joins. Returning to my goal of this project, to evaluate trends in public vs private sector spaceflight, I needed to create a dataset which could classify missions as either public or private sector. 
 
-    For exclusively this part of the project, I utilised generative AI to streamline a specific part of the data preparation process—creating a table of existing company names and classifying them as public or private sector. By automating this step, I was able to focus more on the deeper analysis and insights, ensuring a more efficient workflow. AI tools were used responsibly and did not influence the core data analysis, but instead acted as a means to enhance productivity and accuracy during the initial data collection phase. To ensure the resultant table returned the exact index of companies as the initial data set, I used an EXACT function which confirmed consistency across the two datasets. I saved this table as space_agencies.csv.
+For exclusively this part of the project, I utilised generative AI to streamline a specific part of the data preparation process—creating a table of existing company names and classifying them as public or private sector. By automating this step, I was able to focus more on the deeper analysis and insights, ensuring a more efficient workflow. AI tools were used responsibly and did not influence the core data analysis, but instead acted as a means to enhance productivity and accuracy during the initial data collection phase. To ensure the resultant table returned the exact index of companies as the initial data set, I used an EXACT function which confirmed consistency across the two datasets. I saved this table as space_agencies.csv.
 
 
 ## Exploratory Data Analysis and Database Creation with SQL
