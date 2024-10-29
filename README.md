@@ -21,11 +21,7 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 10. [Conclusions and Review of Outcomes](#conclusions-and-review-of-outcomes)
 
 
----
-
-<br><br><br>
-
-
+----
 ## Project Aims
 
 I will perform initial ETL (Extract, Transform, Load) operations on the dataset using Power Query to prepare it for further analysis. This preparation is crucial for ensuring data integrity and consistency, allowing for meaningful insights to be derived. This dataset is not my own and may not present the data in way I deem efficient or intuitive, so being able to manipulate how the data is stored is a vital step.
