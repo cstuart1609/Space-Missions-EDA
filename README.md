@@ -264,6 +264,8 @@ This shows the absolute dominance of the USA in private spaceflight with French 
 
 As I will discuss, I am generally happy with the outcome of my analysis in terms of validating my initial hypothesis, however, there were a few aspects of the project that created difficulties throughout. Although they slowed the completion of the project, I feel that they also presented opportunities to develop my skillset and apply critical-thinking to overcome them.
 
+As a broader ambition, I would like to enhance my Python skillset and knowledge of Kaggle and Github to perform queries in the platform. As an alternative, I may explore uploading my next project to my own website that I would create - I feel this might allow me to include interactive slicers and animated visuals.
+
 ### Data Accuracy
 Data accuracy in the AI-generated tables presented significant challenges throughout the project. Several notable errors highlighted these issues, such as the listing of the ABMA (Army Ballistic Missile Agency) as AMBA. This misidentification made it impossible to ascertain its correct sector, leading to potential inaccuracies in my analysis. Additionally, the RAE (Royal Aerospace Establishment) was incorrectly attributed to Brazil instead of its true origin, Great Britain. Such discrepancies not only undermine the reliability of the dataset but also complicate the analysis process by obscuring critical context about the agencies involved.
 
