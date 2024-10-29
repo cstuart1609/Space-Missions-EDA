@@ -134,35 +134,33 @@ The data I will need for this stage will include Launch Country (parsed from Lau
 
 ![image](https://github.com/user-attachments/assets/f20cbbd0-0b02-42fe-9fef-734664c80198)
 
-As I am using SQLite in this project, it is slightly more difficult to perform this function than in PostgreSQL where I could simply use a SPLIT_PART function to categorically split by delim.
+As I am using SQLite in this project, it is slightly more difficult to perform this function than in PostgreSQL where I could simply use a SPLIT_PART function to categorically split by delimeter. In fact, after attempting a number of work arounds, my version of DB Browser for SQLite does not support REVERSE or negative indexing of INSTR functions. As a result, I made the decison to return to the ETL stage and delimit within Power Query and create a new missions table variant which puts a greater focus to location. I will add this new table to the database as space_locations.
 
-In fact, after attempting a number of work arounds, my version of DB Browser for SQLite does not support REVERSE or negative indexing of INSTR functions. As a result, I made the decison to return to the ETL stage and delimit within Power Query and create a new missions table variant this gives a greater focus to location. I will add this new table to the database as space_locations.
+During this additional ETL process, I uncovered some unique historical nuances in the dataset. Specifically, there were 318 missions listed as launched from "France." However, none of these launches actually occurred on the French mainland; instead, 4 were conducted from Algeria, and 314 from French Guiana. This presented a challenge, as I aim to map launch locations geographically while attributing each launch to the correct country.
 
-
-* So upon doing this addition ETL I discovered some historical quirks within my dataset. Namely any Missions launched from 'France', amounting to 318 missions. Not a single one of these within the dataset are launched from mainland France (4 from Algeria and 314 from French Guiana). This presented a challenge for me because with my objective of mapping launches geographically I want the location tagged geographically but still want accredit France with the launch - I can do this via the space_agencies table which accredits the launching agency to the Country which operates it. This will acredit some launches instead to 'Joint' but as a summary statistic, I am okay with this.
+To achieve this, I can use the space_agencies table, which associates each launching agency with its operating country. This will allow me to geographically map the launches accurately, while still crediting the missions to France as the overseeing nation. Although this approach will attribute some launches to “Joint” operations, it’s an acceptable compromise for summary statistics in the analysis.
 
 As a first step, I would parse out the last component of the Location column as 'initial_country'
 
-* A further complication was that the launch location was occassionally not affiliated with a country but instead another geographical region, such as 'Pacific Ocean', 'Yellow Sea' and in one case 'New Mexico'. I also noticed an error where an Iranian launch did not include Iran in the location, instead pulling the launch site in as initial country.
+![image](https://github.com/user-attachments/assets/03153165-eefa-415b-a728-da995fde0cc3)
 
-  ![image](https://github.com/user-attachments/assets/03153165-eefa-415b-a728-da995fde0cc3)
-  
-In order to address both complications, I opted to create a custom column that would transform the outputs for the missions subject to the above challenges. Using a series of IF statements within M Code, I created the launch_geo column which I would use as my country field for geo mapping.
+A further complication was that the launch location was occassionally not affiliated with a country but instead another geographical region, such as 'Pacific Ocean', 'Yellow Sea' and in one case 'New Mexico'. I also noticed an error where an Iranian launch did not include Iran in the location, instead pulling the launch site in as initial country.
 
-As part of my ongoing improvement of best practice, I formatted the new columns in lower case and with _ instead of spaces for greater efficiency when querying.
+In order to address both complications, I opted to create a custom column that would transform the outputs for the missions subject to the above challenges. Using a series of IF statements within M Code, I created the launch_geo column which I would use as my country field for geo mapping. As part of my ongoing improvement of best practice, I formatted the new columns in lower case and with _ instead of spaces for greater efficiency when querying.
 
 ![ETL3](https://github.com/user-attachments/assets/b2b1bad7-0d3c-42b9-a051-7a6b0c9f5ffc)
 
 I now saved the new table as space_location.csv which I will now add to my database in DB Browser.
-Note: There was a variety of locations within the USA, Russia and China such as Marshall Islands. Although this would have made for a more interesting graphic, I decided to group these as best as possible as it would make for a more powerful visualisations. If was solely interested in mapping the precise location of each launch, this is something I would explore, however this does not fall within this projects objectives. I consider a distinction between this extrapolating launch sites under 'France' due to broader context.
+
+Note: There was number of launch facilities within Russia, China and the USA (such as Marshall Islands). Although this would have made for a more interesting graphic, I decided to group these as best as possible as it would make for a more powerful visualisations. If I were solely interested in mapping the precise location of each launch, this is something I would explore, however this does not fall within this project's objectives. I consider a distinction between this and clarifying launch sites within 'France' due to broader context.
 
 As a result of my extensive ETL on this location data, I am able to extract the information I want with a relatively simple query (note: 21 unique launch geos were returned within the data). 
 
 ![Query4](https://github.com/user-attachments/assets/63f8ba21-0b65-4c97-8467-8ede4b8c8836)
 
-As expected, given common knowledge of space exploration, the USA and Russia feature heavily on this list, with a large number from former Soviet Republic Kazahkstan. With launches from French Guiana corresponding with the efforts of the European Space Agency (ESA); China and Europe represent the 'best of the rest'. Given my awareness of space flight trends, India's inclusion in the Top 7 reflects a remarkable and rapid development of their space program in recent years, something I expect to represented visually during my visualisation phase.
+As anticipated, the data confirms that the USA and Russia dominate launch activity, with a significant number of missions originating from Kazakhstan, a former Soviet republic. French Guiana also appears frequently, reflecting the European Space Agency’s (ESA) operations, while China and Japan together make up much of the remainder. India’s presence in the top seven launch locations highlights the impressive recent growth of its space programme, which I expect will become even more apparent in the upcoming visualisation phase.
 
-I'd now like to do further analysis on launch locations by also including the agency type, agency country of origin and year. The reason for this is to see how often the launch geo corresponds with the agency country of origin and if there is a difference in this trend between public and private sector.
+Next, I plan to deepen the analysis of launch locations by examining the agency type, country of origin, and launch year. This approach will allow me to observe how often launch locations align with the agency’s country of origin and whether any notable differences exist between public and private sector trends.
 
 ![image](https://github.com/user-attachments/assets/4aa4777b-301f-4da1-83b7-4d9ec049c481)
 
@@ -251,7 +249,7 @@ This visual is similar to the bubble chart from before - but now uses a heatmap 
 
 #### Launches since 2000
 ![image](https://github.com/user-attachments/assets/48d8e44b-9af8-4df3-ae7d-8ea3ddfcb999)
-This shows a significant drop-off in Russian launches, while China and French Guiana show strongly in this set. Note the number of countries with launches taking place, reflecting the presence of numerous launch sites in the modern age.
+This shows a significant drop-off in Russian launches, while China and French Guiana show strongly in this set. Note the number of countries with launches taking place, reflecting the presence of numerous launch sites in the modern age. As eluded to earlier, India's progress as a space-faring nation is clear to see, appearing to match launches from Russia and Japan in the period.
 
 #### Launches from 1957-1967 
 ![image](https://github.com/user-attachments/assets/7c61a760-f3ff-4422-add4-23149af466b1)
@@ -267,7 +265,7 @@ This shows a pretty even spread behind a dominant Russia and USSR. Interestingly
 
 #### Private Sector Launches between 1957-2022
 ![image](https://github.com/user-attachments/assets/83c6575e-8d25-42a8-a58f-e8c97e918c68)
-This shows the absolute dominance of the USA in private spaceflight with French Guiana and Japan with a strong showing. 
+This shows the absolute dominance of the USA in private spaceflight with French Guiana and Japan with a strong showing. Compared to the public sector, fewer nations appear here.
 
 
 ----
