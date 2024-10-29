@@ -6,6 +6,7 @@
 
 The Space Missions dataset encompasses a comprehensive record of global rocket launches spanning from 1957 to 2022. This dataset serves as a rich resource for analysing the evolution of space missions over time, providing insights into various factors influencing launch trends. My project aims to conduct an Exploratory Data Analysis (EDA) on this dataset, employing a systematic approach to data processing and visualisation.
 
+
 ---
 
 <br><br><br>
@@ -21,6 +22,11 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 8. [Data Visualisations in Power BI](#data-visualisations-in-power-bi)
 9. [Project Criticisms](#project-criticisms)
 10. [Conclusions and Review of Outcomes](#conclusions-and-review-of-outcomes)
+
+
+---
+
+<br><br><br>
 
 
 ## Project Aims
