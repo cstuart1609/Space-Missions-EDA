@@ -26,7 +26,7 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 
 I will perform initial ETL (Extract, Transform, Load) operations on the dataset using Power Query to prepare it for further analysis. This preparation is crucial for ensuring data integrity and consistency, allowing for meaningful insights to be derived. This dataset is not my own and may not present the data in way I deem efficient or intuitive, so being able to manipulate how the data is stored is a vital step.
 
-Leveraging Generative AI, I created a new table that serves as a lookup table for the companies and agencies behind the rocket launches. This additional layer of data is vital for understanding trends over time based on the volume and success of launches, specifically examining how these factors vary according to whether the launch was funded and performed by public or private sector entities.
+Leveraging Generative AI, I created a new table that serves as a lookup table for the companies and agencies behind the rocket launches. This additional layer of data is vital for understanding trends over time based on the volume and origin of launches, specifically examining how these factors vary according to whether the launch was funded and performed by public or private sector entities.
 
 I aim to explore global trends in private spaceflight, as well as the industry in general. While the USA boasts a robust and established private sector in the space industry, it is essential to identify which other countries are emerging in this field. Understanding these trends will provide insights into potential investment opportunities and the global landscape of the space industry.
 
