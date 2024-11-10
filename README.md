@@ -4,7 +4,7 @@
 
 ## Project Brief
 
-The Space Missions dataset encompasses a comprehensive record of global rocket launches spanning from 1957 to 2022. This dataset serves as a rich resource for analysing the evolution of space missions over time, providing insights into various factors influencing launch trends. My project aims to conduct an Exploratory Data Analysis (EDA) on this dataset, employing a systematic approach to data processing and visualisation.
+The Space Missions dataset encompasses a comprehensive record of global rocket launches spanning from 1957 to 2022. This dataset serves as a rich resource for analysing the evolution of space missions over time and offers insights into various factors influencing launch trends. My project aims to conduct an Exploratory Data Analysis (EDA) on this dataset, employing a systematic approach to data processing and visualisation.
 
 
 ----
@@ -24,11 +24,11 @@ The Space Missions dataset encompasses a comprehensive record of global rocket l
 ----
 ## Project Aims
 
-I will perform initial ETL (Extract, Transform, Load) operations on the dataset using Power Query to prepare it for further analysis. This preparation is crucial for ensuring data integrity and consistency, allowing for meaningful insights to be derived. This dataset is not my own and may not present the data in way I deem efficient or intuitive, so being able to manipulate how the data is stored is a vital step.
+I will perform initial ETL (Extract, Transform, Load) operations on the dataset using Power Query to prepare it for further analysis. This preparation is crucial to ensure data integrity and consistency, allowing for meaningful insights to be derived. This dataset is not my own and may not present the data in way I deem efficient or intuitive, so being able to manipulate how the data is stored is a vital step.
 
-Leveraging Generative AI, I created a new table that serves as a lookup table for the companies and agencies behind the rocket launches. This additional layer of data is vital for understanding trends over time based on the volume and origin of launches, specifically examining how these factors vary according to whether the launch was funded and performed by public or private sector entities.
+Leveraging Generative AI, I created a new table that serves as a lookup table for the companies and agencies behind the rocket launches. This additional layer of data is vital for understanding trends over time based on the volume and origin of launches, specifically examining how these factors vary depending on whether the launch was funded and performed by public or private sector entities.
 
-I aim to explore global trends in private spaceflight, as well as the industry in general. While the USA boasts a robust and established private sector in the space industry, it is essential to identify which other countries are emerging in this field. Understanding these trends will provide insights into potential investment opportunities and the global landscape of the space industry.
+I aim to explore global trends in private spaceflight, as well as the industry in general. While the USA has a robust and established private space industry, it is essential to identify other emerging countries in this field. Understanding these trends will provide insights into potential investment opportunities and the global landscape of the space industry.
 
 I am also curious to see how investment, public interest and broader geopolitical events influence the development of the space industry. It is important to identify such patterns to ensure that short-term events and political cycles do not hinder the ability of our species to explore the unknown.
 
@@ -36,7 +36,7 @@ I am also curious to see how investment, public interest and broader geopolitica
 ----
 ## Skill Development & Enrichment
 
-Throughout this project, I am focused on advancing my skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, provides a solid foundation. Although I am not directly applying these skills here, I anticipate that my background will enhance the efficiency and depth of my analysis.
+Throughout this project, I am focused on enhancing my skills in data analytics and visualisation. My prior experience with RStudio during university, where I analysed similar datasets, provides a solid foundation. Although I am not directly applying these skills here, I anticipate that my background will enhance the efficiency and depth of my analysis.
 
 For ETL, I chose Excel and Power Query for their user-friendly interfaces and my familiarity with them, which will streamline the data cleaning and transformation process. I plan to conduct the EDA using SQL (specifically SQLite), allowing me to build datasets from scratch, perform complex joins, and extract additional details effectively.
 
@@ -46,17 +46,17 @@ Lastly, I am particularly interested in enhancing my visualisation skills using 
 ----
 ## Data Dictionary
 
-Find an explanation of each column within the tables of the dataset (where columns appear more than once, they are not repeated)
+This section provides explanations for each column in the dataset tables (repeated columns are listed only once).
 
 * __space_missions__:
     - _company_: Short name code of launching agency (e.g., NASA, SpaceX)
-    - _location_: omprehensive launch location, detailing the launch pad, launch complex, region, and country
+    - _location_: Comprehensive launch location details, including launch pad, complex, region, and country.
     - _year_: Year of launch
     - _LaunchTime_: 24hr formatted time of launch
     - _Rocket_: The name of the rocket employed for the launch (e.g., Falcon 9, Atlas V)
     - _mission_status_: Numeric representation of the mission outcome (0 for Failure, 1 for Success)
     - _rocket_status_: Text string indicating whether the rocket used in the launch is still in active use or has been retired
-    - _price_: price: The cost associated with the launch (this field is deemed redundant for the analysis)
+    - _price_: price: The cost associated with the launch (deemed redundant for this analysis)
     - _mission_: The full name of the mission, initially serving as the primary key for identifying each unique launch
  
 * __space_agencies__:
@@ -100,25 +100,25 @@ For exclusively this part of the project, I utilised generative AI to streamline
 ----
 ## Exploratory Data Analysis and Database Creation with SQL
 
-To get a better understanding of my data, as well as an insight into the scale of launches per year, I performed a quick query to find average missions a year.
+To get a better understanding of my data, as well as an insight into the scale of launches per year, I performed a quick query to find the average missions a year.
 
 ![image](https://github.com/user-attachments/assets/b6069a78-0eac-4a3a-8683-1f919d72aa88)
 
-Now I am just curious to see which years were above this average - I had to use a **UNION** function to further include the average entry for comparison purposes. Notice the 19-year gap between 1997 and 2016, likely due to a combination of Shuttle redundancy and economic factors. As an early hypothesis, it is interesting to note that on either side of this hiatus, there is a marked shift from public to private sector launches.
+Now I am just curious to see which years were above this average - I had to use a **UNION** function to include the average entry for comparison purposes. Notice the 19-year gap between 1997 and 2016, likely due to a combination of Shuttle redundancy and economic factors. As an early hypothesis, it is interesting to note that on either side of this hiatus, there is a marked shift from public to private sector launches.
 
 ![Screenshot 2024-10-17 223656](https://github.com/user-attachments/assets/c4f78402-398e-4100-8775-307a0b806d54)
 
-What I am interested in now I want to see how the composition of launches based on sector changes over time, using a count of total missions. I will use joins to incorporate my generated sector and company information.
+I am now interested in examining how the composition of launches, based on sector, changes over time, using a count of total missions. I will use joins to incorporate my generated sector and company information.
 
 ![Query2](https://github.com/user-attachments/assets/79ec5af8-6d84-479e-abb8-52a9c4923d55)
 
 After running this query, I was mostly pleased with how the data was returned except for two things:
-* In 1957-58 there were no Private sector space flights. Rather than having no entry, for the purpose of further analysis I would like to include them with 0 values to reflect the output highlighted in green.
-* Also note the 'Unknown' entry in 1958. This is the only 'Unknown' entry in the dataset and given this occurred over 60 years ago, this is not easy to remediate. As such I want to include an Unknown field for 1958, but not for any other years as this would create more noise.
+* In 1957-58 there were no private sector space flights. Rather than having no entry, for the purpose of further analysis I would like to include them with 0 values to reflect the output highlighted in green.
+* Also note the 'Unknown' entry in 1958. This is the only 'Unknown' entry in the dataset and given this occurred over 60 years ago, this is not easy to remediate. As such, I want to include an Unknown field for 1958, but not for any other years as this would create more noise.
 
-In order to address the first point, I decided to introduce a series of **CTEs** to my query to create lookup tables for all combinations of year and sector. I used the **UNION** function to append the Public and Private tables together, before joining to the orignal launch data to populate the launch counts. Using the **COALESCE** function, I was able to draw down the launch count or map 0 if no launches occured.
+In order to address the first point, I decided to introduce a series of **CTEs** to my query to create lookup tables for all combinations of year and sector. I used the **UNION** function to append the Public and Private tables together, before joining to the original launch data to populate the launch counts. Using the **COALESCE** function, I was able to draw down the launch count or map 0 if no launches occurred.
 
-For the second point, I created a further CTE for the Unknown sector, but filtered to only show **1958** to reduce noise as mentioned. Given the size of this dataset, it was quite easy to notice unknown as the only entry, however in a larger dataset, I would further explore how common an occurance unknown was before deciding to filter.
+For the second point, I created a further CTE for the Unknown sector, but filtered to only show **1958** to reduce noise as mentioned. Given the size of this dataset, it was quite easy to notice unknown as the only entry, however in a larger dataset, I would further explore how common an occurence unknown was before deciding to filter.
 
 ![Query3](https://github.com/user-attachments/assets/99b0c30b-507e-481a-a15d-85c8a7a3d7a9)
 
@@ -128,15 +128,15 @@ I am now very happy with the output and format of output for my breakdown of mis
 ----
 # Bonus EDA and Data Commentary
 
-I thought it might also be interesting to understand the distribution of launches globally and further, how this has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicer/sliders to show time trends on a map. For places like Kazakhstan, I could map mission data in its own graph to show if the breakup of the USSR impacted launch frequency for example.
+I thought it might also be interesting to understand the distribution of launches globally and also how it has trended over time. Within my visualisation stage, I shall hopefully create a heatmap to show location data, as well as slicers and sliders to show time trends on a map. For places like Kazakhstan, I could map mission data in its own graph to show if the breakup of the USSR impacted launch frequency for example.
 
-The data I will need for this stage will include Launch Country (parsed from Launch Site), Year and also mission count. Before extraction of Launch Country, the result is very noisy with long strings of launchpad designations, launch complexes and subregions. I need to tweak the Location row. As opposed to standardised text strings like EmployeeId etc., I am unable to use the substr function as there is no consistent start to Country name within each string. I must use the final delimiter.
+The data I will need for this stage will include 'Launch Country' (parsed from Launch Site), Year and also mission count. Before extraction of Launch Country, the result is very noisy with long strings of launchpad designations, launch complexes and subregions. I need to tweak the Location row. As opposed to standardised text strings like employeeid etc., I am unable to use the **substr** function as there is no consistent start to Country name within each string. I must use the final delimiter.
 
 ![image](https://github.com/user-attachments/assets/f20cbbd0-0b02-42fe-9fef-734664c80198)
 
-As I am using SQLite in this project, it is slightly more difficult to perform this function than in PostgreSQL where I could simply use a **SPLIT_PART** function to categorically split by delimiter. In fact, after attempting a number of work arounds, my version of DB Browser for SQLite does not support **REVERSE** or negative indexing of **INSTR** functions. As a result, I made the decision to return to the ETL stage and delimit within Power Query and create a new missions table variant which puts a greater focus to location. I will add this new table to the database as space_locations.
+As I am using SQLite in this project, it is slightly more difficult to perform this function than in PostgreSQL where I could simply use a **SPLIT_PART** function to categorically split by delimiter. In fact, after attempting a number of workarounds, my version of DB Browser for SQLite does not support **REVERSE** or negative indexing of **INSTR** functions. As a result, I made the decision to return to the ETL stage and delimit within Power Query and create a new missions table variant which puts a greater focus on location. I will add this new table to the database as space_locations.
 
-During this additional ETL process, I uncovered some unique historical nuances in the dataset. Specifically, there were 318 missions listed as launched from "France." However, none of these launches actually occurred on the French mainland; instead, 4 were conducted from Algeria, and 314 from French Guiana. This presented a challenge, as I aim to map launch locations geographically while attributing each launch to the correct country.
+During this additional ETL process, I uncovered some unique historical nuances in the dataset. Specifically, 318 missions were listed as being launched from "France." However, none of these launches actually occurred on the French mainland; instead, 4 were conducted from Algeria, and 314 from French Guiana. This presented a challenge, as I aimed to map launch locations geographically while attributing each launch to the correct country.
 
 To achieve this, I can use the space_agencies table, which associates each launching agency with its operating country. This will allow me to geographically map the launches accurately, while still crediting the missions to France as the overseeing nation. Although this approach will attribute some launches to “Joint” operations, it’s an acceptable compromise for summary statistics in the analysis.
 
@@ -144,15 +144,15 @@ As a first step, I would parse out the last component of the Location column as 
 
 ![image](https://github.com/user-attachments/assets/03153165-eefa-415b-a728-da995fde0cc3)
 
-A further complication was that the launch location was occassionally not affiliated with a country but instead another geographical region, such as 'Pacific Ocean', 'Yellow Sea' and in one case 'New Mexico'. I also noticed an error where an Iranian launch did not include Iran in the location, instead pulling the launch site in as initial country.
+A further complication was that the launch location was occassionally not affiliated with a country but instead another geographical region, such as 'Pacific Ocean', 'Yellow Sea' and in one case 'New Mexico'. I also noticed an error where an Iranian launch entry did not include Iran in the location, instead pulling the launch site in as initial country.
 
-To address both issues, I opted to create a custom column that would transform the outputs for missions subject to these challenges. Using a series of **IF** statements within M Code, I created the launch_geo column which I would use as my country field for geo mapping. As part of my ongoing improvement of best practice, I formatted the new columns in lower case and with _ instead of spaces for greater efficiency when querying.
+To address both issues, I opted to create a custom column that would transform the outputs for affected missions. Using a series of **IF** statements within M Code, I created the launch_geo column which I would use as my country field for geo mapping. As part of my ongoing improvement of best practice, I formatted the new columns in lower case and with _ instead of spaces for greater efficiency when querying.
 
 ![ETL3](https://github.com/user-attachments/assets/b2b1bad7-0d3c-42b9-a051-7a6b0c9f5ffc)
 
 I now saved the new table as space_location.csv which I will now add to my database in DB Browser.
 
-**Note:** There was number of launch facilities within Russia, China and the USA (such as Marshall Islands). Although this would have made for a more interesting graphic, I decided to group these as best as possible as it would make for a more powerful visualisations. If I were solely interested in mapping the precise location of each launch, this is something I would explore, however this does not fall within this project's objectives. I consider a distinction between this and clarifying launch sites within 'France' due to broader context.
+**Note:** There was number of launch facilities within Russia, China and the USA (such as Marshall Islands). Although this would have made for a more interesting graphic, I decided to group these as best as possible as it would make for a more powerful visualisation. If I were solely interested in mapping the precise location of each launch, this is something I would explore, however this does not fall within this project's objectives. I consider a distinction between this and clarifying launch sites within 'France' due to broader context.
 
 As a result of my extensive ETL work on this location data, I am able to extract the information I want with a relatively simple query (note: 21 unique launch geos were returned within the data). 
 
@@ -165,6 +165,7 @@ Next, I plan to deepen the analysis of launch locations by examining the agency 
 ![image](https://github.com/user-attachments/assets/4aa4777b-301f-4da1-83b7-4d9ec049c481)
 
 Although this view offers no summary or analytical value, I think it is quite a nice way to present the full dataset in the context of this project. It also serves as a good base to perform further analysis on.
+
 I would now like summarise the missions based on launch geo and also the sector behind the launch. This is similar to a previous query but splits out missions across sector.
 
 ![image](https://github.com/user-attachments/assets/9c998370-5192-4751-b7bc-72cf5e9eff95)
@@ -179,28 +180,28 @@ As my final piece of exploratory data analysis, I want to identify which agency 
 
 ![Query5](https://github.com/user-attachments/assets/a5bf0c0f-a081-4463-8a59-0e64879c36d7)
 
-This was an incredibly insightful result, despite the slightly complex query. Notice the dominance of the Soviet agency (RSVN USSR) between 1963-1991, with the end of this dominance coincidicing directly with the dissolution of the Soviet Union that same year. Also note the 2000s when the highest launching agency reached double digits just twice, reflecting my hypothesis that the slow retirement of the space shuttle and wider economic factors contributed to a downturn in spaceflight investment, political ambition and concerns over safety.
+This was an incredibly insightful result, despite the slightly complex query. Notice the dominance of the Soviet agency (RSVN USSR) between 1963-1991, with the end of this dominance coinciding directly with the dissolution of the Soviet Union that same year. Also note the 2000s when the highest launching agency reached double digits just twice, reflecting my hypothesis that the slow retirement of the space shuttle and wider economic factors contributed to a downturn in spaceflight investment, political ambition and concerns over safety.
 
 
 ----
 ## Data Visualisations in Power BI
 
-The next and final practical stage of this project is visualisation the data that I have created, cleaned, modelled and briefly reviewing. This will be carried out within Power BI Desktop where I used a **ODBC** driver to import data from space_missions database on SQLite. Rather than including links to the visuals themselves, I will instead include screenshots of the graphic and then include a brief explanation - this is due to the license I have for Power BI, but also as it better reflects previous work in this project.
+The next and final practical stage of this project is visualisation of the data that I have created, cleaned, modelled and briefly reviewing. This will be carried out within Power BI Desktop where I used an **ODBC** driver to import data from space_missions database on SQLite. Rather than including links to the visuals themselves, I will instead include screenshots of the graphic and then include a brief explanation - this is due to the license I have for Power BI, but also as it more accurately reflects the previous work in this project.
 
-Prior to this project I had little experience with this software, although was I accustomed to complex visualisations via Excel, the power query function, as well as writing DAX expressions to model data further within already imported data. It is a very intuitive piece of software in my opinion with a wide array of informative pieces online and within the product itself, however I do think it is important to have a good understanding of whatever data you are dealing with in this case. 
+Prior to this project I had little experience with this software, although I was accustomed to complex visualisations via Excel, the power query function, as well as writing DAX expressions to model data further within already imported data. In my opinion, it is a very intuitive piece of software with a wide array of informative pieces online and within the product itself, however I do think it is important to have a good understanding of whatever data you are dealing with in this case. 
 
-At this stage, I should explain a late hurdle that I ran into, as well as an underlying issue within the way I modelled my data based on an incorrect assumption. During my initial planning of the data, I assumed that the mission name would be a unique value for each row and as such used it as my index for both the space_missions and space_locations tables. I made this assumption because I felt there would be a standardised naming convention adopted by each agency and while this was the case for the majority of launches, there were a number of exceptions particularly when the launch was an early stage test for a new rocket - for example, there were four identical mission_names for early stage launches for the SpaceX Starship (see below).
+At this stage, I should explain a late hurdle that I ran into, as well as an underlying issue within the way I modelled my data based on an incorrect assumption. During my initial planning of the data, I assumed that the mission name would be a unique value for each row, and therefore, used it as my index for both the space_missions and space_locations tables. I made this assumption because I felt there would be a standardised naming convention adopted by each agency and while this was the case for the majority of launches, there were a number of exceptions particularly when the launch was an early stage test for a new rocket - for example, there were four identical mission_names for early stage launches for the SpaceX Starship (see below).
 
 ![image](https://github.com/user-attachments/assets/4b4159dd-8696-4c6e-aaf5-09a84628cf9c)
 
-I had a choice of solutions to create a unique index/ID field, each with various implications; the first, creating an ID from combining tables - for example combining mission_name with year - was impossible due to some identically named launches within the same year. My only alternative now was index the data with a brand new mission_id field, indexed by number. This is not something I was able to do within Power BI because I needed to ensure that the unique ID was assigned to the same launch and it was impossible for me to ensure that both the space_missions and space_locations were ordered identically. Instead I had to create a new database with the mission_id field added to my initial downloaded data from Kaggle, retreading my steps of creating the space_locations table for this. Although this felt like an annoying backward step, it was an important one to ensure data integrity and accuracy when visualising the data. Below is an updated ERD to show the inclusion of the mission_id field:
+I had several possible solutions to create a unique index/ID field, each with various implications; the first, creating an ID from combining tables - for example combining mission_name with year - was impossible due to some identically named launches within the same year. My only alternative now was to index the data. with a brand new mission_id field, indexed by number. This is not something I was able to do within Power BI because I needed to ensure that the unique ID was assigned to the correct launch, but it was impossible to guarantee that both the space_missions and space_locations tables were ordered identically. Instead, I had to create a new database with the mission_id field added to my initial data downloaded from Kaggle, retracing my steps in creating the space_locations table. Although this felt like an annoying backward step, it was an important one to ensure data integrity and accuracy when visualising the data. Below is an updated ERD to show the inclusion of the mission_id field:
 
 ![image](https://github.com/user-attachments/assets/7a4b163d-9514-4444-bf72-3cce5f6b3f61)
 
-I then ensured that this change had worked, by ensuring Power BI recognised a one-to-one relationship between mission_id.space_missions and mission_id.space_locations.
+I then verified that this change worked by confirming that Power BI recognized a one-to-one relationship between mission_id.space_missions and mission_id.space_locations.
 
-As outlined in my project brief and reflecting the work done within SQL, were a number of key visuaulisations I needed to create:
-* Trend of overall spaceflights over-time as well as a breakdown of flights by sector
+As outlined in my project brief and reflecting the work done within SQL, were a number of key visualisations I needed to create:
+* Trend of overall spaceflights over time as well as a breakdown of flights by sector
     - in order to draw conclusions on growth of private sector and impact of real-world conditions on Government-funded spaceflight.
 * Insight into composition of overall flights by Sector, as well as insight into the Country of origin for the agency facilitating the launch
     - also shows which sectors have contributed to the most flights and also which countries are chief proponents of private spaceflight.
@@ -213,13 +214,13 @@ As outlined in my project brief and reflecting the work done within SQL, were a 
 
 ![image](https://github.com/user-attachments/assets/9088187b-35cd-4948-be86-78c612a8aed5)
 
-This visualization highlights that the United States and Russia have dominated space launches, with Kazakhstan following due to its historical role as a USSR launch site. China and French Guiana also feature significantly, showcasing the contributions of both national and international (such as ESA) space programs.
+This visualisation highlights that the United States and Russia have dominated space launches, with Kazakhstan following due to its historical role as a USSR launch site. China and French Guiana also feature significantly, showcasing the contributions of both national and international (such as ESA) space programs.
 
 ### Geographical Mapping of Launch Density by Geo
 
 ![image](https://github.com/user-attachments/assets/a6462438-c446-450a-b7c7-c594bc0a59e5)
 
-This dashboard shows the results of the previous visualisation, mapped geographically - for regions like the Yellow Sea, there are smaller spotlight graphics to show further detail. It is interesting to note that no single launch has taken place in continental Europe, in contrast with the number of European countries that have facilitated flights. With the exception of a few launches in the Barents Sea and Oceania, many historic flights have taken place close to the Equator - This spatial concentration near the equator relates to orbital mechanics, where lower latitudes offer energy efficiencies for launch vehicles.
+This dashboard shows the results of the previous visualisation, mapped geographically - for regions like the Yellow Sea, there are smaller spotlight graphics to show further detail. It is interesting to note that no orbital space launch has ever taken place in continental Europe, in contrast with the number of European countries that have facilitated flights. With a few exceptions, such as launches in the Barents Sea and Oceania, many historic flights have taken place close to the Equator. - This spatial concentration near the equator relates to orbital mechanics, where lower latitudes offer energy efficiencies for launch vehicles.
 
 ### Trend of public and private sector space flights launched between 1957-2022
 
@@ -273,7 +274,7 @@ This shows the absolute dominance of the USA in private spaceflight with French 
 
 As I will discuss, I am generally happy with the outcome of my analysis in terms of validating my initial hypothesis. However, there were a few aspects of the project that created difficulties throughout. Although they slowed the completion of the project, I feel that they also presented opportunities to develop my skillset and apply critical thinking to overcome them.
 
-As a broader ambition, I would like to enhance my Python skills and knowledge of Kaggle and GitHub to perform queries within the platform. Alternatively, I may explore uploading my next project to a website that I would create. I feel this might allow me to include interactive slicers and animated visuals.
+As a broader ambition, I would like to enhance my Python skills and knowledge of Kaggle and GitHub to perform queries within the platform. Alternatively, I may explore uploading my next project to a website that I would create. I believe this might allow me to include interactive slicers and animated visuals.
 
 ### 1. Data Accuracy
 Data accuracy in the AI-generated tables presented significant challenges throughout the project. Several notable errors highlighted these issues, such as the listing of the ABMA (Army Ballistic Missile Agency) as "AMBA." This misidentification compromised the reliability of the dataset and introduced confusion, especially regarding the sector assignments of these organisations. Additionally, the RAE (Royal Aerospace Establishment) was incorrectly attributed to Brazil instead of its true origin, Great Britain. Such discrepancies not only undermine the reliability of the dataset but also complicate the analysis process by obscuring critical context about the agencies involved.
